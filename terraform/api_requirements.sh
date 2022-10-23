@@ -3,6 +3,7 @@ gcloud services enable bigquerymigration.googleapis.com
 gcloud services enable bigquerystorage.googleapis.com
 gcloud services enable cloudapis.googleapis.com
 gcloud services enable cloudasset.googleapis.com
+gcloud services enable cloudbuild.googleapis.com
 gcloud services enable clouddebugger.googleapis.com
 gcloud services enable cloudfunctions.googleapis.com
 gcloud services enable cloudtrace.googleapis.com

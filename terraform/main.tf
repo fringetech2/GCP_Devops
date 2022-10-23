@@ -48,7 +48,7 @@ resource "google_storage_bucket_object" "cloudfunction" {
 }
 
 resource "google_cloudfunctions_function" "function" {
-  name        = "activities-function"
+  name        = "pubsub_to_bigquery"
   description = "Capture activities from pubsub and push into BQ"
   runtime     = "python39"
 
