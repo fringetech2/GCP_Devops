@@ -1,0 +1,2276 @@
+2022-10-23T21:46:56.195Z [INFO]  Terraform version: 1.3.2
+2022-10-23T21:46:56.195Z [DEBUG] using github.com/hashicorp/go-tfe v1.9.0
+2022-10-23T21:46:56.195Z [DEBUG] using github.com/hashicorp/hcl/v2 v2.14.1
+2022-10-23T21:46:56.195Z [DEBUG] using github.com/hashicorp/terraform-config-inspect v0.0.0-20210209133302-4fd17a0faac2
+2022-10-23T21:46:56.195Z [DEBUG] using github.com/hashicorp/terraform-svchost v0.0.0-20200729002733-f050f53b9734
+2022-10-23T21:46:56.195Z [DEBUG] using github.com/zclconf/go-cty v1.11.0
+2022-10-23T21:46:56.195Z [INFO]  Go runtime version: go1.19.1
+2022-10-23T21:46:56.195Z [INFO]  CLI args: []string{"terraform", "apply"}
+2022-10-23T21:46:56.195Z [DEBUG] Attempting to open CLI config file: /home/devopsuser7/.terraformrc
+2022-10-23T21:46:56.195Z [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2022-10-23T21:46:56.195Z [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2022-10-23T21:46:56.196Z [DEBUG] ignoring non-existing provider search directory /home/devopsuser7/.terraform.d/plugins
+2022-10-23T21:46:56.196Z [DEBUG] ignoring non-existing provider search directory /home/devopsuser7/.local/share/terraform/plugins
+2022-10-23T21:46:56.196Z [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2022-10-23T21:46:56.196Z [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2022-10-23T21:46:56.196Z [INFO]  CLI command args: []string{"apply"}
+2022-10-23T21:46:56.510Z [DEBUG] checking for provisioner in "."
+2022-10-23T21:46:56.517Z [DEBUG] checking for provisioner in "/usr/bin"
+2022-10-23T21:46:56.518Z [INFO]  backend/local: starting Apply operation
+2022-10-23T21:46:56.912Z [DEBUG] created provider logger: level=debug
+2022-10-23T21:46:56.913Z [INFO]  provider: configuring client automatic mTLS
+2022-10-23T21:46:56.942Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5]
+2022-10-23T21:46:56.943Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5 pid=1839
+2022-10-23T21:46:56.943Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5
+2022-10-23T21:46:56.965Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: configuring server automatic mTLS: timestamp=2022-10-23T21:46:56.965Z
+2022-10-23T21:46:57.013Z [DEBUG] provider.terraform-provider-google_v4.41.0_x5: plugin address: network=unix address=/tmp/plugin3222316826 timestamp=2022-10-23T21:46:57.013Z
+2022-10-23T21:46:57.014Z [DEBUG] provider: using plugin: version=5
+2022-10-23T21:46:57.231Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2022-10-23T21:46:57.235Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5 pid=1839
+2022-10-23T21:46:57.235Z [DEBUG] provider: plugin exited
+2022-10-23T21:46:57.235Z [DEBUG] Building and walking validate graph
+2022-10-23T21:46:57.236Z [DEBUG] ProviderTransformer: "google_cloudfunctions_function.function" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:57.236Z [DEBUG] ProviderTransformer: "google_storage_bucket.pluto_bucket" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:57.236Z [DEBUG] ProviderTransformer: "google_bigquery_dataset.bq_dataset" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:57.236Z [DEBUG] ProviderTransformer: "google_pubsub_subscription.pubsub_sub" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:57.236Z [DEBUG] ProviderTransformer: "google_cloud_asset_project_feed.project_feed" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:57.236Z [DEBUG] ProviderTransformer: "google_bigquery_table.bq_table" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:57.236Z [DEBUG] ProviderTransformer: "google_pubsub_topic.pubsub_topic" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:57.236Z [DEBUG] ProviderTransformer: "google_storage_bucket_object.cloudfunction" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:57.237Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/google\"]" references: [var.region var.project_id]
+2022-10-23T21:46:57.237Z [DEBUG] ReferenceTransformer: "google_storage_bucket.pluto_bucket" references: [var.project_id]
+2022-10-23T21:46:57.237Z [DEBUG] ReferenceTransformer: "google_bigquery_dataset.bq_dataset" references: []
+2022-10-23T21:46:57.237Z [DEBUG] ReferenceTransformer: "google_pubsub_subscription.pubsub_sub" references: [google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic]
+2022-10-23T21:46:57.237Z [DEBUG] ReferenceTransformer: "google_cloud_asset_project_feed.project_feed" references: [google_pubsub_topic.pubsub_topic var.project_id google_pubsub_topic.pubsub_topic]
+2022-10-23T21:46:57.237Z [DEBUG] ReferenceTransformer: "var.project_id" references: []
+2022-10-23T21:46:57.237Z [DEBUG] ReferenceTransformer: "google_bigquery_table.bq_table" references: [google_bigquery_dataset.bq_dataset google_bigquery_dataset.bq_dataset]
+2022-10-23T21:46:57.237Z [DEBUG] ReferenceTransformer: "google_pubsub_topic.pubsub_topic" references: []
+2022-10-23T21:46:57.238Z [DEBUG] ReferenceTransformer: "google_storage_bucket_object.cloudfunction" references: []
+2022-10-23T21:46:57.238Z [DEBUG] ReferenceTransformer: "google_cloudfunctions_function.function" references: [google_pubsub_topic.pubsub_topic google_storage_bucket_object.cloudfunction google_pubsub_topic.pubsub_topic]
+2022-10-23T21:46:57.238Z [DEBUG] ReferenceTransformer: "var.region" references: []
+2022-10-23T21:46:57.239Z [DEBUG] Starting graph walk: walkValidate
+2022-10-23T21:46:57.239Z [DEBUG] created provider logger: level=debug
+2022-10-23T21:46:57.240Z [INFO]  provider: configuring client automatic mTLS
+2022-10-23T21:46:57.250Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5]
+2022-10-23T21:46:57.250Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5 pid=1846
+2022-10-23T21:46:57.251Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5
+2022-10-23T21:46:57.277Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: configuring server automatic mTLS: timestamp=2022-10-23T21:46:57.277Z
+2022-10-23T21:46:57.350Z [DEBUG] provider.terraform-provider-google_v4.41.0_x5: plugin address: address=/tmp/plugin2007745415 network=unix timestamp=2022-10-23T21:46:57.349Z
+2022-10-23T21:46:57.350Z [DEBUG] provider: using plugin: version=5
+2022-10-23T21:46:57.667Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2022-10-23T21:46:57.672Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5 pid=1846
+2022-10-23T21:46:57.672Z [DEBUG] provider: plugin exited
+2022-10-23T21:46:57.672Z [INFO]  backend/local: apply calling Plan
+2022-10-23T21:46:57.672Z [DEBUG] Building and walking plan graph for NormalMode
+2022-10-23T21:46:57.673Z [DEBUG] ProviderTransformer: "google_cloudfunctions_function.function (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:57.673Z [DEBUG] ProviderTransformer: "google_cloud_asset_project_feed.project_feed (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:57.673Z [DEBUG] ProviderTransformer: "google_storage_bucket.pluto_bucket (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:57.673Z [DEBUG] ProviderTransformer: "google_bigquery_table.bq_table (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:57.673Z [DEBUG] ProviderTransformer: "google_bigquery_dataset.bq_dataset (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:57.673Z [DEBUG] ProviderTransformer: "google_storage_bucket_object.cloudfunction (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:57.673Z [DEBUG] ProviderTransformer: "google_pubsub_topic.pubsub_topic (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:57.673Z [DEBUG] ProviderTransformer: "google_pubsub_subscription.pubsub_sub (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:57.674Z [DEBUG] ReferenceTransformer: "google_storage_bucket_object.cloudfunction (expand)" references: []
+2022-10-23T21:46:57.674Z [DEBUG] ReferenceTransformer: "google_bigquery_dataset.bq_dataset (expand)" references: []
+2022-10-23T21:46:57.674Z [DEBUG] ReferenceTransformer: "var.region" references: []
+2022-10-23T21:46:57.674Z [DEBUG] ReferenceTransformer: "google_storage_bucket.pluto_bucket (expand)" references: [var.project_id]
+2022-10-23T21:46:57.674Z [DEBUG] ReferenceTransformer: "var.project_id" references: []
+2022-10-23T21:46:57.674Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/google\"]" references: [var.region var.project_id]
+2022-10-23T21:46:57.675Z [DEBUG] ReferenceTransformer: "google_bigquery_table.bq_table (expand)" references: [google_bigquery_dataset.bq_dataset (expand) google_bigquery_dataset.bq_dataset (expand)]
+2022-10-23T21:46:57.675Z [DEBUG] ReferenceTransformer: "google_pubsub_topic.pubsub_topic (expand)" references: []
+2022-10-23T21:46:57.675Z [DEBUG] ReferenceTransformer: "google_pubsub_subscription.pubsub_sub (expand)" references: [google_pubsub_topic.pubsub_topic (expand) google_pubsub_topic.pubsub_topic (expand)]
+2022-10-23T21:46:57.675Z [DEBUG] ReferenceTransformer: "google_cloudfunctions_function.function (expand)" references: [google_pubsub_topic.pubsub_topic (expand) google_storage_bucket_object.cloudfunction (expand) google_pubsub_topic.pubsub_topic (expand)]
+2022-10-23T21:46:57.675Z [DEBUG] ReferenceTransformer: "google_cloud_asset_project_feed.project_feed (expand)" references: [google_pubsub_topic.pubsub_topic (expand) var.project_id google_pubsub_topic.pubsub_topic (expand)]
+2022-10-23T21:46:57.676Z [DEBUG] Starting graph walk: walkPlan
+2022-10-23T21:46:57.677Z [DEBUG] created provider logger: level=debug
+2022-10-23T21:46:57.677Z [INFO]  provider: configuring client automatic mTLS
+2022-10-23T21:46:57.689Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5]
+2022-10-23T21:46:57.690Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5 pid=1854
+2022-10-23T21:46:57.690Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5
+2022-10-23T21:46:57.718Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: configuring server automatic mTLS: timestamp=2022-10-23T21:46:57.718Z
+2022-10-23T21:46:57.767Z [DEBUG] provider.terraform-provider-google_v4.41.0_x5: plugin address: address=/tmp/plugin3694607750 network=unix timestamp=2022-10-23T21:46:57.767Z
+2022-10-23T21:46:57.768Z [DEBUG] provider: using plugin: version=5
+2022-10-23T21:46:58.082Z [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/hashicorp/google\"]" changed the config value, but that value is unused
+2022-10-23T21:46:58.085Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [INFO] Authenticating using DefaultClient...: timestamp=2022-10-23T21:46:58.085Z
+2022-10-23T21:46:58.085Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [INFO]   -- Scopes: [https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/userinfo.email]: timestamp=2022-10-23T21:46:58.085Z
+2022-10-23T21:46:58.088Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [INFO] Authenticating using DefaultClient...: timestamp=2022-10-23T21:46:58.088Z
+2022-10-23T21:46:58.088Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [INFO]   -- Scopes: [https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/userinfo.email]: timestamp=2022-10-23T21:46:58.088Z
+2022-10-23T21:46:58.091Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Waiting for state to become: [success]: timestamp=2022-10-23T21:46:58.091Z
+2022-10-23T21:46:58.166Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [INFO] Terraform is using this identity: devopsuser7@roimoonbank.com: timestamp=2022-10-23T21:46:58.166Z
+2022-10-23T21:46:58.167Z [DEBUG] ReferenceTransformer: "google_storage_bucket_object.cloudfunction" references: []
+2022-10-23T21:46:58.168Z [INFO]  ReferenceTransformer: reference not found: "var.project_id"
+2022-10-23T21:46:58.168Z [DEBUG] ReferenceTransformer: "google_storage_bucket.pluto_bucket" references: []
+2022-10-23T21:46:58.168Z [DEBUG] ReferenceTransformer: "google_pubsub_topic.pubsub_topic" references: []
+2022-10-23T21:46:58.169Z [DEBUG] ReferenceTransformer: "google_bigquery_dataset.bq_dataset" references: []
+2022-10-23T21:46:58.184Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [INFO] Instantiating Google Storage client for path https://storage.googleapis.com/storage/v1/: timestamp=2022-10-23T21:46:58.183Z
+2022-10-23T21:46:58.187Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Waiting for state to become: [success]: timestamp=2022-10-23T21:46:58.186Z
+2022-10-23T21:46:58.188Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:46:58.187Z
+2022-10-23T21:46:58.188Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:46:58.187Z
+2022-10-23T21:46:58.188Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:46:58.187Z
+2022-10-23T21:46:58.188Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:46:58.187Z
+2022-10-23T21:46:58.188Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /storage/v1/b/mb-devops-user7-terraform/o/cloudfunction.zip?alt=json&prettyPrint=false HTTP/1.1
+Host: storage.googleapis.com
+User-Agent: google-api-go-client/0.5 Terraform/1.3.2 (+https://www.terraform.io) Terraform-Plugin-SDK/2.10.1 terraform-provider-google/dev
+X-Goog-Api-Client: gl-go/1.18.1 gdcl/0.92.0
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-10-23T21:46:58.187Z
+2022-10-23T21:46:58.190Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /v1/projects/mb-devops-user7/topics/activities?alt=json HTTP/1.1
+Host: pubsub.googleapis.com
+User-Agent: Terraform/1.3.2 (+https://www.terraform.io) Terraform-Plugin-SDK/2.10.1 terraform-provider-google/dev
+Content-Type: application/json
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-10-23T21:46:58.190Z
+2022-10-23T21:46:58.195Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Waiting for state to become: [success]: timestamp=2022-10-23T21:46:58.195Z
+2022-10-23T21:46:58.196Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [INFO] Instantiating Google Storage client for path https://storage.googleapis.com/storage/v1/: timestamp=2022-10-23T21:46:58.196Z
+2022-10-23T21:46:58.211Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:46:58.209Z
+2022-10-23T21:46:58.211Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:46:58.209Z
+2022-10-23T21:46:58.211Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /storage/v1/b/mb-devops-user7-bucket?alt=json&prettyPrint=false HTTP/1.1
+Host: storage.googleapis.com
+User-Agent: google-api-go-client/0.5 Terraform/1.3.2 (+https://www.terraform.io) Terraform-Plugin-SDK/2.10.1 terraform-provider-google/dev
+X-Goog-Api-Client: gl-go/1.18.1 gdcl/0.92.0
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-10-23T21:46:58.210Z
+2022-10-23T21:46:58.214Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Waiting for state to become: [success]: timestamp=2022-10-23T21:46:58.214Z
+2022-10-23T21:46:58.215Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:46:58.215Z
+2022-10-23T21:46:58.215Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:46:58.215Z
+2022-10-23T21:46:58.220Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /bigquery/v2/projects/mb-devops-user7/datasets/activities?alt=json HTTP/1.1
+Host: bigquery.googleapis.com
+User-Agent: Terraform/1.3.2 (+https://www.terraform.io) Terraform-Plugin-SDK/2.10.1 terraform-provider-google/dev
+Content-Type: application/json
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-10-23T21:46:58.219Z
+2022-10-23T21:46:58.249Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Content-Length: 745
+Cache-Control: private, max-age=0, must-revalidate, no-transform
+Content-Type: application/json; charset=UTF-8
+Date: Sun, 23 Oct 2022 21:46:58 GMT
+Etag: CJjjwZKl9/oCEAE=
+Expires: Sun, 23 Oct 2022 21:46:58 GMT
+Server: UploadServer
+Vary: Origin
+Vary: X-Origin
+X-Guploader-Uploadid: ADPycdtFHmng6qf-TzoKm_xNLu-cqImf6_RDyJcItmseVzGJBgiWNXk8gyNBKVWQ7v68qVPOFyQRc_Ithb5kXkYNZY8V0g
+
+{
+ "kind": "storage#object",
+ "id": "mb-devops-user7-terraform/cloudfunction.zip/1666560361001368",
+ "selfLink": "https://www.googleapis.com/storage/v1/b/mb-devops-user7-terraform/o/cloudfunction.zip",
+ "mediaLink": "https://storage.googleapis.com/download/storage/v1/b/mb-devops-user7-terraform/o/cloudfunction.zip?generation=1666560361001368&alt=media",
+ "name": "cloudfunction.zip",
+ "bucket": "mb-devops-user7-terraform",
+ "generation": "1666560361001368",
+ "metageneration": "1",
+ "contentType": "application/zip",
+ "storageClass": "STANDARD",
+ "size": "751",
+ "md5Hash": "TbYhlvzfBj+DcU4SvejHBg==",
+ "crc32c": "35nu9A==",
+ "etag": "CJjjwZKl9/oCEAE=",
+ "timeCreated": "2022-10-23T21:26:01.039Z",
+ "updated": "2022-10-23T21:26:01.039Z",
+ "timeStorageClassUpdated": "2022-10-23T21:26:01.039Z"
+}
+-----------------------------------------------------: timestamp=2022-10-23T21:46:58.249Z
+2022-10-23T21:46:58.249Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:46:58.249Z
+2022-10-23T21:46:58.249Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:46:58.249Z
+2022-10-23T21:46:58.259Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_storage_bucket_object.cloudfunction, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .content_disposition: planned value cty.StringVal("") for a non-computed attribute
+      - .cache_control: planned value cty.StringVal("") for a non-computed attribute
+      - .content_language: planned value cty.StringVal("") for a non-computed attribute
+      - .metadata: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+      - .temporary_hold: planned value cty.False for a non-computed attribute
+      - .detect_md5hash: planned value cty.StringVal("TbYhlvzfBj+DcU4SvejHBg==") for a non-computed attribute
+      - .content_encoding: planned value cty.StringVal("") for a non-computed attribute
+      - .event_based_hold: planned value cty.False for a non-computed attribute
+2022-10-23T21:46:58.307Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Sun, 23 Oct 2022 21:46:58 GMT
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+  "name": "projects/mb-devops-user7/topics/activities",
+  "messageRetentionDuration": "86600s"
+}
+
+-----------------------------------------------------: timestamp=2022-10-23T21:46:58.307Z
+2022-10-23T21:46:58.307Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:46:58.307Z
+2022-10-23T21:46:58.307Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:46:58.307Z
+2022-10-23T21:46:58.315Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_pubsub_topic.pubsub_topic, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .kms_key_name: planned value cty.StringVal("") for a non-computed attribute
+      - .labels: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+2022-10-23T21:46:58.316Z [INFO]  ReferenceTransformer: reference not found: "google_pubsub_topic.pubsub_topic"
+2022-10-23T21:46:58.316Z [DEBUG] ReferenceTransformer: "google_pubsub_subscription.pubsub_sub" references: []
+2022-10-23T21:46:58.316Z [INFO]  ReferenceTransformer: reference not found: "google_pubsub_topic.pubsub_topic"
+2022-10-23T21:46:58.316Z [DEBUG] ReferenceTransformer: "google_cloudfunctions_function.function" references: []
+2022-10-23T21:46:58.317Z [INFO]  ReferenceTransformer: reference not found: "google_pubsub_topic.pubsub_topic"
+2022-10-23T21:46:58.317Z [INFO]  ReferenceTransformer: reference not found: "var.project_id"
+2022-10-23T21:46:58.317Z [DEBUG] ReferenceTransformer: "google_cloud_asset_project_feed.project_feed" references: []
+2022-10-23T21:46:58.328Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] matching ID projects/mb-devops-user7/locations/us-central1/functions/activities-function to regex projects/(?P<project>[^/]+)/locations/(?P<region>[^/]+)/functions/(?P<name>[^/]+).: timestamp=2022-10-23T21:46:58.327Z
+2022-10-23T21:46:58.328Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] importing project = mb-devops-user7: timestamp=2022-10-23T21:46:58.327Z
+2022-10-23T21:46:58.328Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] importing region = us-central1: timestamp=2022-10-23T21:46:58.327Z
+2022-10-23T21:46:58.337Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] importing name = activities-function: timestamp=2022-10-23T21:46:58.327Z
+2022-10-23T21:46:58.337Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [INFO] Instantiating Google Cloud CloudFunctions Client for path https://cloudfunctions.googleapis.com/: timestamp=2022-10-23T21:46:58.327Z
+2022-10-23T21:46:58.337Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:46:58.328Z
+2022-10-23T21:46:58.338Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:46:58.328Z
+2022-10-23T21:46:58.338Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /v1/projects/mb-devops-user7/locations/us-central1/functions/activities-function?alt=json&prettyPrint=false HTTP/1.1
+Host: cloudfunctions.googleapis.com
+User-Agent: google-api-go-client/0.5 Terraform/1.3.2 (+https://www.terraform.io) Terraform-Plugin-SDK/2.10.1 terraform-provider-google/dev
+X-Goog-Api-Client: gl-go/1.18.1 gdcl/0.92.0
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-10-23T21:46:58.328Z
+2022-10-23T21:46:58.347Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Waiting for state to become: [success]: timestamp=2022-10-23T21:46:58.345Z
+2022-10-23T21:46:58.351Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Waiting for state to become: [success]: timestamp=2022-10-23T21:46:58.351Z
+2022-10-23T21:46:58.351Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:46:58.351Z
+2022-10-23T21:46:58.351Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:46:58.351Z
+2022-10-23T21:46:58.352Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:46:58.351Z
+2022-10-23T21:46:58.352Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:46:58.351Z
+2022-10-23T21:46:58.352Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /v1/projects/1020549290667/feeds/asset-feed?alt=json HTTP/1.1
+Host: cloudasset.googleapis.com
+User-Agent: Terraform/1.3.2 (+https://www.terraform.io) Terraform-Plugin-SDK/2.10.1 terraform-provider-google/dev
+Content-Type: application/json
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-10-23T21:46:58.352Z
+2022-10-23T21:46:58.352Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /v1/projects/mb-devops-user7/subscriptions/activites-catchall?alt=json HTTP/1.1
+Host: pubsub.googleapis.com
+User-Agent: Terraform/1.3.2 (+https://www.terraform.io) Terraform-Plugin-SDK/2.10.1 terraform-provider-google/dev
+Content-Type: application/json
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-10-23T21:46:58.352Z
+2022-10-23T21:46:58.434Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Sun, 23 Oct 2022 21:46:58 GMT
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+  "name": "projects/1020549290667/feeds/asset-feed",
+  "assetTypes": [
+    "compute.googleapis.com/Autoscaler",
+    "compute.googleapis.com/Address",
+    "compute.googleapis.com/GlobalAddress",
+    "compute.googleapis.com/BackendBucket",
+    "compute.googleapis.com/BackendService",
+    "compute.googleapis.com/Commitment",
+    "compute.googleapis.com/Disk",
+    "compute.googleapis.com/ExternalVpnGateway",
+    "compute.googleapis.com/Firewall",
+    "compute.googleapis.com/FirewallPolicy",
+    "compute.googleapis.com/ForwardingRule",
+    "compute.googleapis.com/GlobalForwardingRule",
+    "compute.googleapis.com/HealthCheck",
+    "compute.googleapis.com/HttpHealthCheck",
+    "compute.googleapis.com/HttpsHealthCheck",
+    "compute.googleapis.com/Image",
+    "compute.googleapis.com/Instance",
+    "compute.googleapis.com/InstanceGroup",
+    "compute.googleapis.com/InstanceGroupManager",
+    "compute.googleapis.com/InstanceTemplate",
+    "compute.googleapis.com/Interconnect",
+    "compute.googleapis.com/InterconnectAttachment",
+    "compute.googleapis.com/License",
+    "compute.googleapis.com/Network",
+    "compute.googleapis.com/NetworkEndpointGroup",
+    "compute.googleapis.com/NodeTemplate",
+    "compute.googleapis.com/PacketMirroring",
+    "compute.googleapis.com/Project",
+    "compute.googleapis.com/RegionBackendService",
+    "compute.googleapis.com/RegionDisk",
+    "compute.googleapis.com/Reservation",
+    "compute.googleapis.com/ResourcePolicy",
+    "compute.googleapis.com/Route",
+    "compute.googleapis.com/Router",
+    "compute.googleapis.com/SecurityPolicy",
+    "compute.googleapis.com/ServiceAttachment",
+    "compute.googleapis.com/Snapshot",
+    "compute.googleapis.com/SslCertificate",
+    "compute.googleapis.com/SslPolicy",
+    "compute.googleapis.com/Subnetwork",
+    "compute.googleapis.com/TargetHttpProxy",
+    "compute.googleapis.com/TargetHttpsProxy",
+    "compute.googleapis.com/TargetInstance",
+    "compute.googleapis.com/TargetPool",
+    "compute.googleapis.com/TargetTcpProxy",
+    "compute.googleapis.com/TargetSslProxy",
+    "compute.googleapis.com/TargetVpnGateway",
+    "compute.googleapis.com/UrlMap",
+    "compute.googleapis.com/VpnGateway",
+"compute.googleapis.com/VpnTunnel"
+  ],
+  "contentType": "RESOURCE",
+  "feedOutputConfig": {
+    "pubsubDestination": {
+      "topic": "projects/mb-devops-user7/topics/activities"
+    }
+  }
+}
+
+-----------------------------------------------------: timestamp=2022-10-23T21:46:58.434Z
+2022-10-23T21:46:58.434Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:46:58.434Z
+2022-10-23T21:46:58.434Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:46:58.434Z
+2022-10-23T21:46:58.436Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an unexpected new value for google_cloud_asset_project_feed.project_feed during refresh.
+      - .asset_names: was null, but now cty.ListValEmpty(cty.String)
+2022-10-23T21:46:58.443Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_cloud_asset_project_feed.project_feed, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .asset_names: planned value cty.ListValEmpty(cty.String) for a non-computed attribute
+2022-10-23T21:46:58.444Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Content-Length: 554
+Cache-Control: private, max-age=0, must-revalidate, no-transform
+Content-Type: application/json; charset=UTF-8
+Date: Sun, 23 Oct 2022 21:46:58 GMT
+Etag: CAE=
+Expires: Sun, 23 Oct 2022 21:46:58 GMT
+Server: UploadServer
+Vary: Origin
+Vary: X-Origin
+X-Guploader-Uploadid: ADPycdtqjkXekPGugEkzpmPfuQ-6DMEX3_vx3STv0G_ST2Z4IB7FvDxOAr1jT5tI9lhO7tSUJ8kMqq7y-OpdGnGMR9NB1A
+
+{
+ "kind": "storage#bucket",
+ "selfLink": "https://www.googleapis.com/storage/v1/b/mb-devops-user7-bucket",
+ "id": "mb-devops-user7-bucket",
+ "name": "mb-devops-user7-bucket",
+ "projectNumber": "1020549290667",
+ "metageneration": "1",
+ "location": "US-CENTRAL1",
+ "storageClass": "STANDARD",
+ "etag": "CAE=",
+ "timeCreated": "2022-10-23T21:26:01.463Z",
+ "updated": "2022-10-23T21:26:01.463Z",
+ "versioning": {
+  "enabled": false
+ },
+ "iamConfiguration": {
+  "bucketPolicyOnly": {
+   "enabled": false
+  },
+  "uniformBucketLevelAccess": {
+   "enabled": false
+  },
+  "publicAccessPrevention": "inherited"
+ },
+ "locationType": "region"
+}
+-----------------------------------------------------: timestamp=2022-10-23T21:46:58.442Z
+2022-10-23T21:46:58.444Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:46:58.442Z
+2022-10-23T21:46:58.444Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:46:58.442Z
+2022-10-23T21:46:58.444Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Read bucket mb-devops-user7-bucket at location https://www.googleapis.com/storage/v1/b/mb-devops-user7-bucket: timestamp=2022-10-23T21:46:58.443Z
+2022-10-23T21:46:58.453Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_storage_bucket.pluto_bucket, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .storage_class: planned value cty.StringVal("STANDARD") for a non-computed attribute
+      - .force_destroy: planned value cty.False for a non-computed attribute
+      - .labels: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+      - .requester_pays: planned value cty.False for a non-computed attribute
+      - .default_event_based_hold: planned value cty.False for a non-computed attribute
+2022-10-23T21:46:58.492Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Sun, 23 Oct 2022 21:46:58 GMT
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+  "name": "projects/mb-devops-user7/subscriptions/activites-catchall",
+  "topic": "projects/mb-devops-user7/topics/activities",
+  "pushConfig": {},
+  "ackDeadlineSeconds": 20,
+  "messageRetentionDuration": "604800s",
+  "expirationPolicy": {
+    "ttl": "2678400s"
+  },
+  "topicMessageRetentionDuration": "86600s",
+  "state": "ACTIVE"
+}
+
+-----------------------------------------------------: timestamp=2022-10-23T21:46:58.492Z
+2022-10-23T21:46:58.492Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:46:58.492Z
+2022-10-23T21:46:58.492Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:46:58.492Z
+2022-10-23T21:46:58.500Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_pubsub_subscription.pubsub_sub, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .filter: planned value cty.StringVal("") for a non-computed attribute
+      - .retain_acked_messages: planned value cty.False for a non-computed attribute
+      - .enable_exactly_once_delivery: planned value cty.False for a non-computed attribute
+      - .enable_message_ordering: planned value cty.False for a non-computed attribute
+      - .labels: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+      - .message_retention_duration: planned value cty.StringVal("604800s") for a non-computed attribute
+      - .expiration_policy: block count in plan (1) disagrees with count in config (0)
+2022-10-23T21:46:58.537Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Sun, 23 Oct 2022 21:46:58 GMT
+Etag: wvwC+5oEIPz39GHnvFqYBQ==
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+  "kind": "bigquery#dataset",
+  "etag": "wvwC+5oEIPz39GHnvFqYBQ==",
+  "id": "mb-devops-user7:activities",
+  "selfLink": "https://bigquery.googleapis.com/bigquery/v2/projects/mb-devops-user7/datasets/activities",
+  "datasetReference": {
+    "datasetId": "activities",
+    "projectId": "mb-devops-user7"
+  },
+  "friendlyName": "activities",
+  "description": "Moonbank activities dataset",
+  "defaultTableExpirationMs": "3600000",
+  "access": [
+    {
+      "role": "WRITER",
+      "specialGroup": "projectWriters"
+    },
+    {
+      "role": "OWNER",
+      "specialGroup": "projectOwners"
+    },
+    {
+      "role": "OWNER",
+      "userByEmail": "devopsuser7@roimoonbank.com"
+    },
+    {
+      "role": "READER",
+      "specialGroup": "projectReaders"
+    }
+  ],
+  "creationTime": "1666560361344",
+  "lastModifiedTime": "1666560361344",
+  "location": "US",
+  "type": "DEFAULT"
+}
+
+-----------------------------------------------------: timestamp=2022-10-23T21:46:58.536Z
+2022-10-23T21:46:58.537Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:46:58.536Z
+2022-10-23T21:46:58.537Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:46:58.536Z
+2022-10-23T21:46:58.556Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_bigquery_dataset.bq_dataset, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .default_partition_expiration_ms: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .delete_contents_on_destroy: planned value cty.False for a non-computed attribute
+      - .labels: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+2022-10-23T21:46:58.559Z [INFO]  ReferenceTransformer: reference not found: "google_bigquery_dataset.bq_dataset"
+2022-10-23T21:46:58.559Z [DEBUG] ReferenceTransformer: "google_bigquery_table.bq_table" references: []
+2022-10-23T21:46:58.565Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [INFO] Reading BigQuery table: projects/mb-devops-user7/datasets/activities/tables/resources: timestamp=2022-10-23T21:46:58.565Z
+2022-10-23T21:46:58.565Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [INFO] Instantiating Google Cloud BigQuery client for path https://bigquery.googleapis.com/bigquery/v2/: timestamp=2022-10-23T21:46:58.565Z
+2022-10-23T21:46:58.565Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:46:58.565Z
+2022-10-23T21:46:58.565Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:46:58.565Z
+2022-10-23T21:46:58.565Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:46:58.565Z
+2022-10-23T21:46:58.566Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:46:58.565Z
+2022-10-23T21:46:58.566Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /bigquery/v2/projects/mb-devops-user7/datasets/activities/tables/resources?alt=json&prettyPrint=false HTTP/1.1
+Host: bigquery.googleapis.com
+User-Agent: google-api-go-client/0.5 Terraform/1.3.2 (+https://www.terraform.io) Terraform-Plugin-SDK/2.10.1 terraform-provider-google/dev
+X-Goog-Api-Client: gl-go/1.18.1 gdcl/0.92.0
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-10-23T21:46:58.566Z
+2022-10-23T21:46:58.628Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Sun, 23 Oct 2022 21:46:58 GMT
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+ "name": "projects/mb-devops-user7/locations/us-central1/functions/activities-function",
+ "description": "Capture activities from pubsub and push into BQ",
+ "sourceArchiveUrl": "gs://mb-devops-user7/cloudfunction.zip",
+ "eventTrigger": {
+  "eventType": "google.pubsub.topic.publish",
+  "resource": "projects/mb-devops-user7/topics/activities",
+  "service": "pubsub.googleapis.com",
+  "failurePolicy": {}
+ },
+ "status": "UNKNOWN",
+ "entryPoint": "activities-function",
+ "timeout": "60s",
+ "availableMemoryMb": 128,
+ "serviceAccountEmail": "mb-devops-user7@appspot.gserviceaccount.com",
+ "updateTime": "2022-10-23T21:45:33.142Z",
+ "versionId": "1",
+ "runtime": "python39",
+ "ingressSettings": "ALLOW_ALL",
+ "dockerRegistry": "CONTAINER_REGISTRY"
+}
+-----------------------------------------------------: timestamp=2022-10-23T21:46:58.628Z
+2022-10-23T21:46:58.628Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:46:58.628Z
+2022-10-23T21:46:58.628Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:46:58.628Z
+2022-10-23T21:46:58.630Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an unexpected new value for google_cloudfunctions_function.function during refresh.
+      - .kms_key_name: was null, but now cty.StringVal("")
+      - .entry_point: was null, but now cty.StringVal("activities-function")
+      - .docker_repository: was null, but now cty.StringVal("")
+      - .labels: was null, but now cty.MapValEmpty(cty.String)
+      - .vpc_connector: was null, but now cty.StringVal("")
+      - .region: was null, but now cty.StringVal("us-central1")
+      - .docker_registry: was null, but now cty.StringVal("CONTAINER_REGISTRY")
+      - .vpc_connector_egress_settings: was null, but now cty.StringVal("")
+      - .build_worker_pool: was null, but now cty.StringVal("")
+      - .min_instances: was null, but now cty.NumberIntVal(0)
+      - .project: was null, but now cty.StringVal("mb-devops-user7")
+      - .service_account_email: was null, but now cty.StringVal("mb-devops-user7@appspot.gserviceaccount.com")
+      - .environment_variables: was null, but now cty.MapValEmpty(cty.String)
+      - .event_trigger[0].resource: was cty.StringVal("activities"), but now cty.StringVal("projects/mb-devops-user7/topics/activities")
+      - .event_trigger[0].failure_policy: block count changed from 0 to 1
+2022-10-23T21:46:58.638Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_cloudfunctions_function.function, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .ingress_settings: planned value cty.StringVal("ALLOW_ALL") for a non-computed attribute
+      - .max_instances: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .event_trigger[0].failure_policy: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+2022-10-23T21:46:58.792Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Sun, 23 Oct 2022 21:46:58 GMT
+Etag: 5gVBHBhkaOJPog6dYyEKnw==
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+ "kind": "bigquery#table",
+ "etag": "5gVBHBhkaOJPog6dYyEKnw==",
+ "id": "mb-devops-user7:activities.resources",
+ "selfLink": "https://bigquery.googleapis.com/bigquery/v2/projects/mb-devops-user7/datasets/activities/tables/resources",
+ "tableReference": {
+  "projectId": "mb-devops-user7",
+  "datasetId": "activities",
+  "tableId": "resources"
+ },
+ "schema": {
+  "fields": [
+   {
+    "name": "messages",
+    "type": "STRING"
+   }
+  ]
+ },
+ "numBytes": "0",
+ "numLongTermBytes": "0",
+ "numRows": "0",
+ "creationTime": "1666560361955",
+ "expirationTime": "1666563961955",
+ "lastModifiedTime": "1666560362092",
+ "type": "TABLE",
+ "location": "US",
+ "numTotalLogicalBytes": "0",
+ "numActiveLogicalBytes": "0",
+ "numLongTermLogicalBytes": "0"
+}
+-----------------------------------------------------: timestamp=2022-10-23T21:46:58.791Z
+2022-10-23T21:46:58.792Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:46:58.791Z
+2022-10-23T21:46:58.792Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:46:58.791Z
+2022-10-23T21:46:58.792Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:46:58.791Z
+2022-10-23T21:46:58.793Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:46:58.791Z
+2022-10-23T21:46:58.804Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_bigquery_table.bq_table, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .friendly_name: planned value cty.StringVal("") for a non-computed attribute
+      - .description: planned value cty.StringVal("") for a non-computed attribute
+      - .labels: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+2022-10-23T21:46:58.807Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2022-10-23T21:46:58.807Z [DEBUG] provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:46:58 [DEBUG] [transport] transport: http2Server.HandleStreams failed to read frame: read unix /tmp/plugin3694607750->@: use of closed network connection 
+2022-10-23T21:46:58.811Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5 pid=1854
+2022-10-23T21:46:58.811Z [DEBUG] provider: plugin exited
+2022-10-23T21:46:58.817Z [DEBUG] building apply graph to check for errors
+2022-10-23T21:46:58.817Z [DEBUG] ProviderTransformer: "google_bigquery_table.bq_table" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:58.818Z [DEBUG] ProviderTransformer: "google_storage_bucket.pluto_bucket (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:58.818Z [DEBUG] ProviderTransformer: "google_storage_bucket_object.cloudfunction" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:58.818Z [DEBUG] ProviderTransformer: "google_pubsub_topic.pubsub_topic" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:58.818Z [DEBUG] ProviderTransformer: "google_bigquery_dataset.bq_dataset" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:58.818Z [DEBUG] ProviderTransformer: "google_bigquery_table.bq_table (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:58.818Z [DEBUG] ProviderTransformer: "google_storage_bucket.pluto_bucket" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:58.818Z [DEBUG] ProviderTransformer: "google_pubsub_subscription.pubsub_sub" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:58.818Z [DEBUG] ProviderTransformer: "google_pubsub_subscription.pubsub_sub (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:58.818Z [DEBUG] ProviderTransformer: "google_cloud_asset_project_feed.project_feed (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:58.818Z [DEBUG] ProviderTransformer: "google_cloudfunctions_function.function (destroy)" (*terraform.NodeDestroyResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:58.818Z [DEBUG] ProviderTransformer: "google_cloud_asset_project_feed.project_feed" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:58.818Z [DEBUG] ProviderTransformer: "google_storage_bucket_object.cloudfunction (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:58.818Z [DEBUG] ProviderTransformer: "google_pubsub_topic.pubsub_topic (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:58.818Z [DEBUG] ProviderTransformer: "google_bigquery_dataset.bq_dataset (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:58.818Z [DEBUG] ProviderTransformer: "google_cloudfunctions_function.function" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:58.818Z [DEBUG] ProviderTransformer: "google_cloudfunctions_function.function (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:46:58.819Z [INFO]  ReferenceTransformer: reference not found: "google_pubsub_topic.pubsub_topic#destroy"
+2022-10-23T21:46:58.819Z [DEBUG] ReferenceTransformer: "google_cloud_asset_project_feed.project_feed" references: [google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic (expand) var.project_id google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic (expand)]
+2022-10-23T21:46:58.819Z [DEBUG] ReferenceTransformer: "google_storage_bucket_object.cloudfunction (expand)" references: []
+2022-10-23T21:46:58.819Z [DEBUG] ReferenceTransformer: "google_cloud_asset_project_feed.project_feed (expand)" references: []
+2022-10-23T21:46:58.819Z [DEBUG] ReferenceTransformer: "var.project_id" references: []
+2022-10-23T21:46:58.819Z [DEBUG] ReferenceTransformer: "google_storage_bucket.pluto_bucket" references: [var.project_id]
+2022-10-23T21:46:58.819Z [INFO]  ReferenceTransformer: reference not found: "google_pubsub_topic.pubsub_topic#destroy"
+2022-10-23T21:46:58.819Z [DEBUG] ReferenceTransformer: "google_pubsub_subscription.pubsub_sub" references: [google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic (expand) google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic (expand)]
+2022-10-23T21:46:58.819Z [INFO]  ReferenceTransformer: reference not found: "google_pubsub_topic.pubsub_topic#destroy"
+2022-10-23T21:46:58.819Z [DEBUG] ReferenceTransformer: "google_cloudfunctions_function.function" references: [google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic (expand) google_storage_bucket_object.cloudfunction (expand) google_storage_bucket_object.cloudfunction google_storage_bucket_object.cloudfunction google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic (expand)]
+2022-10-23T21:46:58.819Z [INFO]  ReferenceTransformer: reference not found: "google_bigquery_dataset.bq_dataset#destroy"
+2022-10-23T21:46:58.819Z [DEBUG] ReferenceTransformer: "google_bigquery_table.bq_table" references: [google_bigquery_dataset.bq_dataset google_bigquery_dataset.bq_dataset google_bigquery_dataset.bq_dataset (expand) google_bigquery_dataset.bq_dataset google_bigquery_dataset.bq_dataset google_bigquery_dataset.bq_dataset (expand)]
+2022-10-23T21:46:58.820Z [DEBUG] ReferenceTransformer: "google_storage_bucket.pluto_bucket (expand)" references: []
+2022-10-23T21:46:58.820Z [DEBUG] ReferenceTransformer: "google_pubsub_subscription.pubsub_sub (expand)" references: []
+2022-10-23T21:46:58.820Z [DEBUG] ReferenceTransformer: "google_storage_bucket_object.cloudfunction" references: []
+2022-10-23T21:46:58.820Z [DEBUG] ReferenceTransformer: "google_pubsub_topic.pubsub_topic" references: []
+2022-10-23T21:46:58.820Z [DEBUG] ReferenceTransformer: "google_bigquery_dataset.bq_dataset" references: []
+2022-10-23T21:46:58.820Z [DEBUG] ReferenceTransformer: "google_cloudfunctions_function.function (expand)" references: []
+2022-10-23T21:46:58.820Z [DEBUG] ReferenceTransformer: "google_bigquery_dataset.bq_dataset (expand)" references: []
+2022-10-23T21:46:58.820Z [DEBUG] ReferenceTransformer: "google_bigquery_table.bq_table (expand)" references: []
+2022-10-23T21:46:58.820Z [DEBUG] ReferenceTransformer: "google_pubsub_topic.pubsub_topic (expand)" references: []
+2022-10-23T21:46:58.820Z [DEBUG] ReferenceTransformer: "var.region" references: []
+2022-10-23T21:46:58.820Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/google\"]" references: [var.project_id var.region]
+2022-10-23T21:46:58.820Z [DEBUG] DestroyEdgeTransformer2: google_pubsub_topic.pubsub_topic has stored dependency of google_cloudfunctions_function.function (destroy)
+2022-10-23T21:46:58.821Z [DEBUG] DestroyEdgeTransformer2: google_storage_bucket_object.cloudfunction has stored dependency of google_cloudfunctions_function.function (destroy)
+2022-10-23T21:46:58.826Z [DEBUG] command: asking for input: "\nDo you want to perform these actions in workspace \"dev\"?"
+2022-10-23T21:47:00.868Z [INFO]  backend/local: apply calling Apply
+2022-10-23T21:47:00.868Z [DEBUG] Building and walking apply graph for NormalMode plan
+2022-10-23T21:47:00.869Z [DEBUG] ProviderTransformer: "google_storage_bucket_object.cloudfunction" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:47:00.869Z [DEBUG] ProviderTransformer: "google_bigquery_table.bq_table" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:47:00.869Z [DEBUG] ProviderTransformer: "google_bigquery_dataset.bq_dataset" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:47:00.869Z [DEBUG] ProviderTransformer: "google_cloudfunctions_function.function (destroy)" (*terraform.NodeDestroyResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:47:00.869Z [DEBUG] ProviderTransformer: "google_storage_bucket_object.cloudfunction (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:47:00.869Z [DEBUG] ProviderTransformer: "google_cloudfunctions_function.function (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:47:00.869Z [DEBUG] ProviderTransformer: "google_cloud_asset_project_feed.project_feed" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:47:00.869Z [DEBUG] ProviderTransformer: "google_cloudfunctions_function.function" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:47:00.869Z [DEBUG] ProviderTransformer: "google_storage_bucket.pluto_bucket (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:47:00.869Z [DEBUG] ProviderTransformer: "google_cloud_asset_project_feed.project_feed (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:47:00.869Z [DEBUG] ProviderTransformer: "google_pubsub_topic.pubsub_topic" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:47:00.869Z [DEBUG] ProviderTransformer: "google_bigquery_table.bq_table (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:47:00.869Z [DEBUG] ProviderTransformer: "google_pubsub_subscription.pubsub_sub (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:47:00.869Z [DEBUG] ProviderTransformer: "google_storage_bucket.pluto_bucket" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:47:00.869Z [DEBUG] ProviderTransformer: "google_pubsub_subscription.pubsub_sub" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:47:00.869Z [DEBUG] ProviderTransformer: "google_pubsub_topic.pubsub_topic (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:47:00.869Z [DEBUG] ProviderTransformer: "google_bigquery_dataset.bq_dataset (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:47:00.870Z [INFO]  ReferenceTransformer: reference not found: "google_pubsub_topic.pubsub_topic#destroy"
+2022-10-23T21:47:00.871Z [DEBUG] ReferenceTransformer: "google_pubsub_subscription.pubsub_sub" references: [google_pubsub_topic.pubsub_topic (expand) google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic (expand) google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic]
+2022-10-23T21:47:00.871Z [INFO]  ReferenceTransformer: reference not found: "google_pubsub_topic.pubsub_topic#destroy"
+2022-10-23T21:47:00.871Z [DEBUG] ReferenceTransformer: "google_cloudfunctions_function.function" references: [google_pubsub_topic.pubsub_topic (expand) google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic google_storage_bucket_object.cloudfunction (expand) google_storage_bucket_object.cloudfunction google_storage_bucket_object.cloudfunction google_pubsub_topic.pubsub_topic (expand) google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic]
+2022-10-23T21:47:00.871Z [DEBUG] ReferenceTransformer: "google_pubsub_topic.pubsub_topic (expand)" references: []
+2022-10-23T21:47:00.871Z [DEBUG] ReferenceTransformer: "var.region" references: []
+2022-10-23T21:47:00.871Z [DEBUG] ReferenceTransformer: "var.project_id" references: []
+2022-10-23T21:47:00.871Z [DEBUG] ReferenceTransformer: "google_storage_bucket.pluto_bucket" references: [var.project_id]
+2022-10-23T21:47:00.871Z [DEBUG] ReferenceTransformer: "google_cloud_asset_project_feed.project_feed (expand)" references: []
+2022-10-23T21:47:00.871Z [DEBUG] ReferenceTransformer: "google_pubsub_topic.pubsub_topic" references: []
+2022-10-23T21:47:00.871Z [DEBUG] ReferenceTransformer: "google_bigquery_dataset.bq_dataset" references: []
+2022-10-23T21:47:00.871Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/google\"]" references: [var.project_id var.region]
+2022-10-23T21:47:00.871Z [DEBUG] ReferenceTransformer: "google_storage_bucket_object.cloudfunction (expand)" references: []
+2022-10-23T21:47:00.871Z [DEBUG] ReferenceTransformer: "google_cloudfunctions_function.function (expand)" references: []
+2022-10-23T21:47:00.871Z [DEBUG] ReferenceTransformer: "google_storage_bucket.pluto_bucket (expand)" references: []
+2022-10-23T21:47:00.871Z [DEBUG] ReferenceTransformer: "google_bigquery_dataset.bq_dataset (expand)" references: []
+2022-10-23T21:47:00.871Z [INFO]  ReferenceTransformer: reference not found: "google_bigquery_dataset.bq_dataset#destroy"
+2022-10-23T21:47:00.871Z [DEBUG] ReferenceTransformer: "google_bigquery_table.bq_table" references: [google_bigquery_dataset.bq_dataset google_bigquery_dataset.bq_dataset google_bigquery_dataset.bq_dataset (expand) google_bigquery_dataset.bq_dataset google_bigquery_dataset.bq_dataset google_bigquery_dataset.bq_dataset (expand)]
+2022-10-23T21:47:00.871Z [DEBUG] ReferenceTransformer: "google_bigquery_table.bq_table (expand)" references: []
+2022-10-23T21:47:00.871Z [DEBUG] ReferenceTransformer: "google_pubsub_subscription.pubsub_sub (expand)" references: []
+2022-10-23T21:47:00.871Z [DEBUG] ReferenceTransformer: "google_storage_bucket_object.cloudfunction" references: []
+2022-10-23T21:47:00.872Z [INFO]  ReferenceTransformer: reference not found: "google_pubsub_topic.pubsub_topic#destroy"
+2022-10-23T21:47:00.872Z [DEBUG] ReferenceTransformer: "google_cloud_asset_project_feed.project_feed" references: [google_pubsub_topic.pubsub_topic (expand) google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic var.project_id google_pubsub_topic.pubsub_topic (expand) google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic]
+2022-10-23T21:47:00.872Z [DEBUG] DestroyEdgeTransformer2: google_pubsub_topic.pubsub_topic has stored dependency of google_cloudfunctions_function.function (destroy)
+2022-10-23T21:47:00.872Z [DEBUG] DestroyEdgeTransformer2: google_storage_bucket_object.cloudfunction has stored dependency of google_cloudfunctions_function.function (destroy)
+2022-10-23T21:47:00.875Z [DEBUG] Starting graph walk: walkApply
+2022-10-23T21:47:00.875Z [DEBUG] created provider logger: level=debug
+2022-10-23T21:47:00.875Z [INFO]  provider: configuring client automatic mTLS
+2022-10-23T21:47:00.890Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5]
+2022-10-23T21:47:00.891Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5 pid=1878
+2022-10-23T21:47:00.891Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5
+2022-10-23T21:47:00.921Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: configuring server automatic mTLS: timestamp=2022-10-23T21:47:00.921Z
+2022-10-23T21:47:00.970Z [DEBUG] provider.terraform-provider-google_v4.41.0_x5: plugin address: address=/tmp/plugin3484712044 network=unix timestamp=2022-10-23T21:47:00.970Z
+2022-10-23T21:47:00.970Z [DEBUG] provider: using plugin: version=5
+2022-10-23T21:47:01.365Z [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/hashicorp/google\"]" changed the config value, but that value is unused
+2022-10-23T21:47:01.370Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:01 [INFO] Authenticating using DefaultClient...: timestamp=2022-10-23T21:47:01.370Z
+2022-10-23T21:47:01.370Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:01 [INFO]   -- Scopes: [https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/userinfo.email]: timestamp=2022-10-23T21:47:01.370Z
+2022-10-23T21:47:01.372Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:01 [INFO] Authenticating using DefaultClient...: timestamp=2022-10-23T21:47:01.372Z
+2022-10-23T21:47:01.372Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:01 [INFO]   -- Scopes: [https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/userinfo.email]: timestamp=2022-10-23T21:47:01.372Z
+2022-10-23T21:47:01.374Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:01 [DEBUG] Waiting for state to become: [success]: timestamp=2022-10-23T21:47:01.374Z
+2022-10-23T21:47:01.452Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:01 [INFO] Terraform is using this identity: devopsuser7@roimoonbank.com: timestamp=2022-10-23T21:47:01.452Z
+2022-10-23T21:47:01.458Z [INFO]  Starting apply for google_cloudfunctions_function.function
+2022-10-23T21:47:01.458Z [DEBUG] google_cloudfunctions_function.function: applying the planned Delete change
+2022-10-23T21:47:01.463Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:01 [DEBUG] matching ID projects/mb-devops-user7/locations/us-central1/functions/activities-function to regex projects/(?P<project>[^/]+)/locations/(?P<region>[^/]+)/functions/(?P<name>[^/]+).: timestamp=2022-10-23T21:47:01.463Z
+2022-10-23T21:47:01.464Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:01 [DEBUG] importing project = mb-devops-user7: timestamp=2022-10-23T21:47:01.464Z
+2022-10-23T21:47:01.464Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:01 [DEBUG] importing region = us-central1: timestamp=2022-10-23T21:47:01.464Z
+2022-10-23T21:47:01.464Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:01 [DEBUG] importing name = activities-function: timestamp=2022-10-23T21:47:01.464Z
+2022-10-23T21:47:01.465Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:01 [INFO] Instantiating Google Cloud CloudFunctions Client for path https://cloudfunctions.googleapis.com/: timestamp=2022-10-23T21:47:01.465Z
+2022-10-23T21:47:01.466Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:01 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:47:01.466Z
+2022-10-23T21:47:01.466Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:01 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:47:01.466Z
+2022-10-23T21:47:01.467Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:01 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+DELETE /v1/projects/mb-devops-user7/locations/us-central1/functions/activities-function?alt=json&prettyPrint=false HTTP/1.1
+Host: cloudfunctions.googleapis.com
+User-Agent: google-api-go-client/0.5 Terraform/1.3.2 (+https://www.terraform.io) Terraform-Plugin-SDK/2.10.1 terraform-provider-google/dev
+X-Goog-Api-Client: gl-go/1.18.1 gdcl/0.92.0
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-10-23T21:47:01.467Z
+2022-10-23T21:47:01.475Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_bigquery_dataset.bq_dataset, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .default_partition_expiration_ms: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .delete_contents_on_destroy: planned value cty.False for a non-computed attribute
+      - .labels: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+2022-10-23T21:47:01.488Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_storage_bucket.pluto_bucket, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .force_destroy: planned value cty.False for a non-computed attribute
+      - .storage_class: planned value cty.StringVal("STANDARD") for a non-computed attribute
+      - .default_event_based_hold: planned value cty.False for a non-computed attribute
+      - .labels: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+      - .requester_pays: planned value cty.False for a non-computed attribute
+2022-10-23T21:47:01.499Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_bigquery_table.bq_table, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .labels: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+      - .description: planned value cty.StringVal("") for a non-computed attribute
+      - .friendly_name: planned value cty.StringVal("") for a non-computed attribute
+2022-10-23T21:47:01.771Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:01 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Sun, 23 Oct 2022 21:47:01 GMT
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+ "name": "operations/bWItZGV2b3BzLXVzZXI3L3VzLWNlbnRyYWwxL2FjdGl2aXRpZXMtZnVuY3Rpb24vUEd3VkR1TFdUN28",
+ "metadata": {
+  "@type": "type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1",
+  "target": "projects/mb-devops-user7/locations/us-central1/functions/activities-function",
+  "type": "DELETE_FUNCTION",
+  "request": {
+   "@type": "type.googleapis.com/google.protobuf.Empty"
+  },
+  "updateTime": "2022-10-23T21:47:01Z"
+ }
+}
+-----------------------------------------------------: timestamp=2022-10-23T21:47:01.771Z
+2022-10-23T21:47:01.772Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:01 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:47:01.771Z
+2022-10-23T21:47:01.772Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:01 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:47:01.772Z
+2022-10-23T21:47:01.772Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:01 [INFO] Instantiating Google Cloud CloudFunctions Client for path https://cloudfunctions.googleapis.com/: timestamp=2022-10-23T21:47:01.772Z
+2022-10-23T21:47:01.772Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:01 [DEBUG] Waiting for state to become: [done: true]: timestamp=2022-10-23T21:47:01.772Z
+2022-10-23T21:47:01.773Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:01 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:47:01.773Z
+2022-10-23T21:47:01.773Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:01 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:47:01.773Z
+2022-10-23T21:47:01.773Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:01 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /v1/operations/bWItZGV2b3BzLXVzZXI3L3VzLWNlbnRyYWwxL2FjdGl2aXRpZXMtZnVuY3Rpb24vUEd3VkR1TFdUN28?alt=json&prettyPrint=false HTTP/1.1
+Host: cloudfunctions.googleapis.com
+User-Agent: google-api-go-client/0.5 Terraform/1.3.2 (+https://www.terraform.io) Terraform-Plugin-SDK/2.10.1 terraform-provider-google/dev
+X-Goog-Api-Client: gl-go/1.18.1 gdcl/0.92.0
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-10-23T21:47:01.773Z
+2022-10-23T21:47:01.867Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:01 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Sun, 23 Oct 2022 21:47:01 GMT
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+ "name": "operations/bWItZGV2b3BzLXVzZXI3L3VzLWNlbnRyYWwxL2FjdGl2aXRpZXMtZnVuY3Rpb24vUEd3VkR1TFdUN28",
+ "metadata": {
+  "@type": "type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1",
+  "target": "projects/mb-devops-user7/locations/us-central1/functions/activities-function",
+  "type": "DELETE_FUNCTION",
+  "request": {
+   "@type": "type.googleapis.com/google.protobuf.Empty"
+  },
+  "updateTime": "2022-10-23T21:47:01Z"
+ }
+}
+-----------------------------------------------------: timestamp=2022-10-23T21:47:01.867Z
+2022-10-23T21:47:01.867Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:01 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:47:01.867Z
+2022-10-23T21:47:01.868Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:01 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:47:01.867Z
+2022-10-23T21:47:01.868Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:01 [DEBUG] Got done: false while polling for operation operations/bWItZGV2b3BzLXVzZXI3L3VzLWNlbnRyYWwxL2FjdGl2aXRpZXMtZnVuY3Rpb24vUEd3VkR1TFdUN28's status: timestamp=2022-10-23T21:47:01.867Z
+2022-10-23T21:47:01.868Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:01 [TRACE] Waiting 10s before next try: timestamp=2022-10-23T21:47:01.867Z
+2022-10-23T21:47:11.868Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:11 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:47:11.868Z
+2022-10-23T21:47:11.868Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:11 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:47:11.868Z
+2022-10-23T21:47:11.868Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:11 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /v1/operations/bWItZGV2b3BzLXVzZXI3L3VzLWNlbnRyYWwxL2FjdGl2aXRpZXMtZnVuY3Rpb24vUEd3VkR1TFdUN28?alt=json&prettyPrint=false HTTP/1.1
+Host: cloudfunctions.googleapis.com
+User-Agent: google-api-go-client/0.5 Terraform/1.3.2 (+https://www.terraform.io) Terraform-Plugin-SDK/2.10.1 terraform-provider-google/dev
+X-Goog-Api-Client: gl-go/1.18.1 gdcl/0.92.0
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-10-23T21:47:11.868Z
+2022-10-23T21:47:12.110Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:12 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Sun, 23 Oct 2022 21:47:12 GMT
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+ "name": "operations/bWItZGV2b3BzLXVzZXI3L3VzLWNlbnRyYWwxL2FjdGl2aXRpZXMtZnVuY3Rpb24vUEd3VkR1TFdUN28",
+ "metadata": {
+  "@type": "type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1",
+  "target": "projects/mb-devops-user7/locations/us-central1/functions/activities-function",
+  "type": "DELETE_FUNCTION",
+  "request": {
+   "@type": "type.googleapis.com/google.protobuf.Empty"
+  },
+  "updateTime": "2022-10-23T21:47:02Z"
+ },
+ "done": true,
+ "response": {
+  "@type": "type.googleapis.com/google.protobuf.Empty"
+ }
+}
+-----------------------------------------------------: timestamp=2022-10-23T21:47:12.110Z
+2022-10-23T21:47:12.110Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:12 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:47:12.110Z
+2022-10-23T21:47:12.110Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:12 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:47:12.110Z
+2022-10-23T21:47:12.110Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:12 [DEBUG] Got done: true while polling for operation operations/bWItZGV2b3BzLXVzZXI3L3VzLWNlbnRyYWwxL2FjdGl2aXRpZXMtZnVuY3Rpb24vUEd3VkR1TFdUN28's status: timestamp=2022-10-23T21:47:12.110Z
+2022-10-23T21:47:12.126Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_pubsub_topic.pubsub_topic, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .kms_key_name: planned value cty.StringVal("") for a non-computed attribute
+      - .labels: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+2022-10-23T21:47:12.130Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_storage_bucket_object.cloudfunction, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .detect_md5hash: planned value cty.StringVal("TbYhlvzfBj+DcU4SvejHBg==") for a non-computed attribute
+      - .content_encoding: planned value cty.StringVal("") for a non-computed attribute
+      - .event_based_hold: planned value cty.False for a non-computed attribute
+      - .cache_control: planned value cty.StringVal("") for a non-computed attribute
+      - .content_disposition: planned value cty.StringVal("") for a non-computed attribute
+      - .metadata: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+      - .temporary_hold: planned value cty.False for a non-computed attribute
+      - .content_language: planned value cty.StringVal("") for a non-computed attribute
+2022-10-23T21:47:12.144Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_pubsub_subscription.pubsub_sub, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .filter: planned value cty.StringVal("") for a non-computed attribute
+      - .retain_acked_messages: planned value cty.False for a non-computed attribute
+      - .message_retention_duration: planned value cty.StringVal("604800s") for a non-computed attribute
+      - .enable_exactly_once_delivery: planned value cty.False for a non-computed attribute
+      - .enable_message_ordering: planned value cty.False for a non-computed attribute
+      - .labels: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+      - .expiration_policy: block count in plan (1) disagrees with count in config (0)
+2022-10-23T21:47:12.144Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_cloudfunctions_function.function, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .ingress_settings: planned value cty.StringVal("ALLOW_ALL") for a non-computed attribute
+      - .max_instances: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .event_trigger[0].failure_policy: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+2022-10-23T21:47:12.145Z [INFO]  Starting apply for google_cloudfunctions_function.function
+2022-10-23T21:47:12.151Z [DEBUG] google_cloudfunctions_function.function: applying the planned Create change
+2022-10-23T21:47:12.153Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_cloud_asset_project_feed.project_feed, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .asset_names: planned value cty.ListValEmpty(cty.String) for a non-computed attribute
+2022-10-23T21:47:12.157Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:12 [DEBUG] setting computed for "event_trigger.0.failure_policy" from ComputedKeys: timestamp=2022-10-23T21:47:12.156Z
+2022-10-23T21:47:12.157Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:12 [DEBUG] setting computed for "event_trigger.0.failure_policy" from ComputedKeys: timestamp=2022-10-23T21:47:12.156Z
+2022-10-23T21:47:12.157Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:12 [DEBUG] Creating cloud function: projects/mb-devops-user7/locations/us-central1/functions/activities-function: timestamp=2022-10-23T21:47:12.157Z
+2022-10-23T21:47:12.157Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:12 [DEBUG] Waiting for state to become: [success]: timestamp=2022-10-23T21:47:12.157Z
+2022-10-23T21:47:12.157Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:12 [INFO] Instantiating Google Cloud CloudFunctions Client for path https://cloudfunctions.googleapis.com/: timestamp=2022-10-23T21:47:12.157Z
+2022-10-23T21:47:12.158Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:12 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:47:12.158Z
+2022-10-23T21:47:12.158Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:12 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:47:12.158Z
+2022-10-23T21:47:12.158Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:12 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+POST /v1/projects/mb-devops-user7/locations/us-central1/functions?alt=json&prettyPrint=false HTTP/1.1
+Host: cloudfunctions.googleapis.com
+User-Agent: google-api-go-client/0.5 Terraform/1.3.2 (+https://www.terraform.io) Terraform-Plugin-SDK/2.10.1 terraform-provider-google/dev
+Content-Length: 437
+Content-Type: application/json
+X-Goog-Api-Client: gl-go/1.18.1 gdcl/0.92.0
+Accept-Encoding: gzip
+
+{
+ "availableMemoryMb": 128,
+ "description": "Capture activities from pubsub and push into BQ",
+ "eventTrigger": {
+  "eventType": "google.pubsub.topic.publish",
+  "failurePolicy": {},
+  "resource": "projects/mb-devops-user7/topics/activities"
+ },
+ "ingressSettings": "ALLOW_ALL",
+ "name": "projects/mb-devops-user7/locations/us-central1/functions/activities-function",
+ "runtime": "python39",
+ "sourceArchiveUrl": "gs://mb-devops-user7/cloudfunction.zip",
+ "timeout": "60s"
+}
+
+-----------------------------------------------------: timestamp=2022-10-23T21:47:12.158Z
+2022-10-23T21:47:12.635Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:12 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Sun, 23 Oct 2022 21:47:12 GMT
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+ "name": "operations/bWItZGV2b3BzLXVzZXI3L3VzLWNlbnRyYWwxL2FjdGl2aXRpZXMtZnVuY3Rpb24vRXdpNmFmQ1I3Nms",
+ "metadata": {
+  "@type": "type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1",
+  "target": "projects/mb-devops-user7/locations/us-central1/functions/activities-function",
+  "type": "CREATE_FUNCTION",
+  "request": {
+   "@type": "type.googleapis.com/google.cloud.functions.v1.CloudFunction",
+   "name": "projects/mb-devops-user7/locations/us-central1/functions/activities-function",
+   "description": "Capture activities from pubsub and push into BQ",
+   "sourceArchiveUrl": "gs://mb-devops-user7/cloudfunction.zip",
+   "eventTrigger": {
+    "eventType": "google.pubsub.topic.publish",
+    "resource": "projects/mb-devops-user7/topics/activities",
+    "failurePolicy": {}
+   },
+   "timeout": "60s",
+   "availableMemoryMb": 128,
+   "runtime": "python39",
+   "ingressSettings": "ALLOW_ALL"
+  },
+  "versionId": "1",
+  "updateTime": "2022-10-23T21:47:12Z"
+ }
+}
+-----------------------------------------------------: timestamp=2022-10-23T21:47:12.635Z
+2022-10-23T21:47:12.636Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:12 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:47:12.635Z
+2022-10-23T21:47:12.636Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:12 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:47:12.635Z
+2022-10-23T21:47:12.636Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:12 [INFO] Instantiating Google Cloud CloudFunctions Client for path https://cloudfunctions.googleapis.com/: timestamp=2022-10-23T21:47:12.635Z
+2022-10-23T21:47:12.636Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:12 [DEBUG] Waiting for state to become: [done: true]: timestamp=2022-10-23T21:47:12.635Z
+2022-10-23T21:47:12.636Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:12 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:47:12.636Z
+2022-10-23T21:47:12.636Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:12 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:47:12.636Z
+2022-10-23T21:47:12.637Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:12 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /v1/operations/bWItZGV2b3BzLXVzZXI3L3VzLWNlbnRyYWwxL2FjdGl2aXRpZXMtZnVuY3Rpb24vRXdpNmFmQ1I3Nms?alt=json&prettyPrint=false HTTP/1.1
+Host: cloudfunctions.googleapis.com
+User-Agent: google-api-go-client/0.5 Terraform/1.3.2 (+https://www.terraform.io) Terraform-Plugin-SDK/2.10.1 terraform-provider-google/dev
+X-Goog-Api-Client: gl-go/1.18.1 gdcl/0.92.0
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-10-23T21:47:12.636Z
+2022-10-23T21:47:12.892Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:12 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Sun, 23 Oct 2022 21:47:12 GMT
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+ "name": "operations/bWItZGV2b3BzLXVzZXI3L3VzLWNlbnRyYWwxL2FjdGl2aXRpZXMtZnVuY3Rpb24vRXdpNmFmQ1I3Nms",
+ "metadata": {
+  "@type": "type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1",
+  "target": "projects/mb-devops-user7/locations/us-central1/functions/activities-function",
+  "type": "CREATE_FUNCTION",
+  "request": {
+   "@type": "type.googleapis.com/google.cloud.functions.v1.CloudFunction",
+   "name": "projects/mb-devops-user7/locations/us-central1/functions/activities-function",
+   "description": "Capture activities from pubsub and push into BQ",
+   "sourceArchiveUrl": "gs://mb-devops-user7/cloudfunction.zip",
+   "eventTrigger": {
+    "eventType": "google.pubsub.topic.publish",
+    "resource": "projects/mb-devops-user7/topics/activities",
+    "failurePolicy": {}
+   },
+   "timeout": "60s",
+   "availableMemoryMb": 128,
+   "runtime": "python39",
+   "ingressSettings": "ALLOW_ALL"
+  },
+  "versionId": "1",
+  "updateTime": "2022-10-23T21:47:12Z"
+ }
+}
+-----------------------------------------------------: timestamp=2022-10-23T21:47:12.892Z
+2022-10-23T21:47:12.892Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:12 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:47:12.892Z
+2022-10-23T21:47:12.892Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:12 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:47:12.892Z
+2022-10-23T21:47:12.892Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:12 [DEBUG] Got done: false while polling for operation operations/bWItZGV2b3BzLXVzZXI3L3VzLWNlbnRyYWwxL2FjdGl2aXRpZXMtZnVuY3Rpb24vRXdpNmFmQ1I3Nms's status: timestamp=2022-10-23T21:47:12.892Z
+2022-10-23T21:47:12.892Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:12 [TRACE] Waiting 10s before next try: timestamp=2022-10-23T21:47:12.892Z
+2022-10-23T21:47:22.895Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:22 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:47:22.895Z
+2022-10-23T21:47:22.895Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:22 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:47:22.895Z
+2022-10-23T21:47:22.895Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:22 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /v1/operations/bWItZGV2b3BzLXVzZXI3L3VzLWNlbnRyYWwxL2FjdGl2aXRpZXMtZnVuY3Rpb24vRXdpNmFmQ1I3Nms?alt=json&prettyPrint=false HTTP/1.1
+Host: cloudfunctions.googleapis.com
+User-Agent: google-api-go-client/0.5 Terraform/1.3.2 (+https://www.terraform.io) Terraform-Plugin-SDK/2.10.1 terraform-provider-google/dev
+X-Goog-Api-Client: gl-go/1.18.1 gdcl/0.92.0
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-10-23T21:47:22.895Z
+2022-10-23T21:47:23.015Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:23 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Sun, 23 Oct 2022 21:47:23 GMT
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+ "name": "operations/bWItZGV2b3BzLXVzZXI3L3VzLWNlbnRyYWwxL2FjdGl2aXRpZXMtZnVuY3Rpb24vRXdpNmFmQ1I3Nms",
+ "metadata": {
+  "@type": "type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1",
+  "target": "projects/mb-devops-user7/locations/us-central1/functions/activities-function",
+  "type": "CREATE_FUNCTION",
+  "request": {
+   "@type": "type.googleapis.com/google.cloud.functions.v1.CloudFunction",
+   "name": "projects/mb-devops-user7/locations/us-central1/functions/activities-function",
+   "description": "Capture activities from pubsub and push into BQ",
+   "sourceArchiveUrl": "gs://mb-devops-user7/cloudfunction.zip",
+   "eventTrigger": {
+    "eventType": "google.pubsub.topic.publish",
+    "resource": "projects/mb-devops-user7/topics/activities",
+    "failurePolicy": {}
+   },
+   "timeout": "60s",
+   "availableMemoryMb": 128,
+   "runtime": "python39",
+   "ingressSettings": "ALLOW_ALL"
+  },
+  "versionId": "1",
+  "updateTime": "2022-10-23T21:47:13Z"
+ },
+ "done": true,
+ "error": {
+  "code": 3,
+  "message": "Failed to retrieve function source code"
+ }
+}
+-----------------------------------------------------: timestamp=2022-10-23T21:47:23.014Z
+2022-10-23T21:47:23.015Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:23 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:47:23.014Z
+2022-10-23T21:47:23.015Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:23 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:47:23.014Z
+2022-10-23T21:47:23.016Z [ERROR] provider.terraform-provider-google_v4.41.0_x5: Response contains error diagnostic: tf_resource_type=google_cloudfunctions_function @caller=github.com/hashicorp/terraform-plugin-go@v0.10.0/tfprotov5/internal/diag/diagnostics.go:56 diagnostic_severity=ERROR diagnostic_summary="Error waiting for Creating CloudFunctions Function: Error code 3, message: Failed to retrieve function source code" tf_provider_addr=provider tf_req_id=bee3fadf-d8bf-29b2-6337-67191466c392 tf_rpc=ApplyResourceChange @module=sdk.proto diagnostic_detail= tf_proto_version=5.2 timestamp=2022-10-23T21:47:23.015Z
+2022-10-23T21:47:23.017Z [ERROR] vertex "google_cloudfunctions_function.function" error: Error waiting for Creating CloudFunctions Function: Error code 3, message: Failed to retrieve function source code
+2022-10-23T21:47:23.530Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2022-10-23T21:47:23.530Z [DEBUG] provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:47:23 [DEBUG] [transport] transport: http2Server.HandleStreams failed to read frame: read unix /tmp/plugin3484712044->@: use of closed network connection 
+2022-10-23T21:47:23.534Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5 pid=1878
+2022-10-23T21:47:23.534Z [DEBUG] provider: plugin exited
+2022-10-23T21:49:38.235Z [INFO]  Terraform version: 1.3.2
+2022-10-23T21:49:38.235Z [DEBUG] using github.com/hashicorp/go-tfe v1.9.0
+2022-10-23T21:49:38.235Z [DEBUG] using github.com/hashicorp/hcl/v2 v2.14.1
+2022-10-23T21:49:38.235Z [DEBUG] using github.com/hashicorp/terraform-config-inspect v0.0.0-20210209133302-4fd17a0faac2
+2022-10-23T21:49:38.235Z [DEBUG] using github.com/hashicorp/terraform-svchost v0.0.0-20200729002733-f050f53b9734
+2022-10-23T21:49:38.235Z [DEBUG] using github.com/zclconf/go-cty v1.11.0
+2022-10-23T21:49:38.235Z [INFO]  Go runtime version: go1.19.1
+2022-10-23T21:49:38.235Z [INFO]  CLI args: []string{"terraform", "apply"}
+2022-10-23T21:49:38.235Z [DEBUG] Attempting to open CLI config file: /home/devopsuser7/.terraformrc
+2022-10-23T21:49:38.235Z [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2022-10-23T21:49:38.236Z [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2022-10-23T21:49:38.236Z [DEBUG] ignoring non-existing provider search directory /home/devopsuser7/.terraform.d/plugins
+2022-10-23T21:49:38.236Z [DEBUG] ignoring non-existing provider search directory /home/devopsuser7/.local/share/terraform/plugins
+2022-10-23T21:49:38.236Z [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2022-10-23T21:49:38.236Z [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2022-10-23T21:49:38.236Z [INFO]  CLI command args: []string{"apply"}
+2022-10-23T21:49:38.539Z [DEBUG] checking for provisioner in "."
+2022-10-23T21:49:38.548Z [DEBUG] checking for provisioner in "/usr/bin"
+2022-10-23T21:49:38.549Z [INFO]  backend/local: starting Apply operation
+2022-10-23T21:49:38.936Z [DEBUG] created provider logger: level=debug
+2022-10-23T21:49:38.936Z [INFO]  provider: configuring client automatic mTLS
+2022-10-23T21:49:38.994Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5]
+2022-10-23T21:49:38.994Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5 pid=1978
+2022-10-23T21:49:38.995Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5
+2022-10-23T21:49:39.018Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: configuring server automatic mTLS: timestamp=2022-10-23T21:49:39.018Z
+2022-10-23T21:49:39.060Z [DEBUG] provider: using plugin: version=5
+2022-10-23T21:49:39.061Z [DEBUG] provider.terraform-provider-google_v4.41.0_x5: plugin address: address=/tmp/plugin3482543085 network=unix timestamp=2022-10-23T21:49:39.060Z
+2022-10-23T21:49:39.375Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2022-10-23T21:49:39.379Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5 pid=1978
+2022-10-23T21:49:39.379Z [DEBUG] provider: plugin exited
+2022-10-23T21:49:39.380Z [DEBUG] Building and walking validate graph
+2022-10-23T21:49:39.381Z [DEBUG] ProviderTransformer: "google_bigquery_dataset.bq_dataset" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:39.381Z [DEBUG] ProviderTransformer: "google_pubsub_topic.pubsub_topic" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:39.381Z [DEBUG] ProviderTransformer: "google_storage_bucket_object.cloudfunction" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:39.381Z [DEBUG] ProviderTransformer: "google_cloudfunctions_function.function" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:39.381Z [DEBUG] ProviderTransformer: "google_cloud_asset_project_feed.project_feed" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:39.381Z [DEBUG] ProviderTransformer: "google_storage_bucket.pluto_bucket" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:39.381Z [DEBUG] ProviderTransformer: "google_bigquery_table.bq_table" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:39.381Z [DEBUG] ProviderTransformer: "google_pubsub_subscription.pubsub_sub" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:39.381Z [DEBUG] ReferenceTransformer: "google_bigquery_table.bq_table" references: [google_bigquery_dataset.bq_dataset google_bigquery_dataset.bq_dataset]
+2022-10-23T21:49:39.382Z [DEBUG] ReferenceTransformer: "google_pubsub_subscription.pubsub_sub" references: [google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic]
+2022-10-23T21:49:39.382Z [DEBUG] ReferenceTransformer: "var.project_id" references: []
+2022-10-23T21:49:39.382Z [DEBUG] ReferenceTransformer: "var.region" references: []
+2022-10-23T21:49:39.382Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/google\"]" references: [var.project_id var.region]
+2022-10-23T21:49:39.382Z [DEBUG] ReferenceTransformer: "google_cloud_asset_project_feed.project_feed" references: [google_pubsub_topic.pubsub_topic var.project_id google_pubsub_topic.pubsub_topic]
+2022-10-23T21:49:39.382Z [DEBUG] ReferenceTransformer: "google_storage_bucket.pluto_bucket" references: [var.project_id]
+2022-10-23T21:49:39.382Z [DEBUG] ReferenceTransformer: "google_bigquery_dataset.bq_dataset" references: []
+2022-10-23T21:49:39.382Z [DEBUG] ReferenceTransformer: "google_pubsub_topic.pubsub_topic" references: []
+2022-10-23T21:49:39.382Z [DEBUG] ReferenceTransformer: "google_storage_bucket_object.cloudfunction" references: []
+2022-10-23T21:49:39.383Z [DEBUG] ReferenceTransformer: "google_cloudfunctions_function.function" references: [google_pubsub_topic.pubsub_topic google_storage_bucket_object.cloudfunction google_pubsub_topic.pubsub_topic]
+2022-10-23T21:49:39.384Z [DEBUG] Starting graph walk: walkValidate
+2022-10-23T21:49:39.385Z [DEBUG] created provider logger: level=debug
+2022-10-23T21:49:39.385Z [INFO]  provider: configuring client automatic mTLS
+2022-10-23T21:49:39.398Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5]
+2022-10-23T21:49:39.399Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5 pid=1986
+2022-10-23T21:49:39.399Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5
+2022-10-23T21:49:39.418Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: configuring server automatic mTLS: timestamp=2022-10-23T21:49:39.418Z
+2022-10-23T21:49:39.463Z [DEBUG] provider.terraform-provider-google_v4.41.0_x5: plugin address: address=/tmp/plugin107245189 network=unix timestamp=2022-10-23T21:49:39.462Z
+2022-10-23T21:49:39.463Z [DEBUG] provider: using plugin: version=5
+2022-10-23T21:49:39.779Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2022-10-23T21:49:39.783Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5 pid=1986
+2022-10-23T21:49:39.783Z [DEBUG] provider: plugin exited
+2022-10-23T21:49:39.783Z [INFO]  backend/local: apply calling Plan
+2022-10-23T21:49:39.783Z [DEBUG] Building and walking plan graph for NormalMode
+2022-10-23T21:49:39.784Z [DEBUG] ProviderTransformer: "google_cloud_asset_project_feed.project_feed (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:39.784Z [DEBUG] ProviderTransformer: "google_bigquery_dataset.bq_dataset (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:39.784Z [DEBUG] ProviderTransformer: "google_pubsub_topic.pubsub_topic (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:39.784Z [DEBUG] ProviderTransformer: "google_storage_bucket.pluto_bucket (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:39.784Z [DEBUG] ProviderTransformer: "google_bigquery_table.bq_table (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:39.784Z [DEBUG] ProviderTransformer: "google_pubsub_subscription.pubsub_sub (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:39.784Z [DEBUG] ProviderTransformer: "google_storage_bucket_object.cloudfunction (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:39.784Z [DEBUG] ProviderTransformer: "google_cloudfunctions_function.function (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:39.785Z [DEBUG] ReferenceTransformer: "google_bigquery_table.bq_table (expand)" references: [google_bigquery_dataset.bq_dataset (expand) google_bigquery_dataset.bq_dataset (expand)]
+2022-10-23T21:49:39.785Z [DEBUG] ReferenceTransformer: "google_pubsub_subscription.pubsub_sub (expand)" references: [google_pubsub_topic.pubsub_topic (expand) google_pubsub_topic.pubsub_topic (expand)]
+2022-10-23T21:49:39.785Z [DEBUG] ReferenceTransformer: "var.region" references: []
+2022-10-23T21:49:39.785Z [DEBUG] ReferenceTransformer: "google_storage_bucket.pluto_bucket (expand)" references: [var.project_id]
+2022-10-23T21:49:39.785Z [DEBUG] ReferenceTransformer: "google_bigquery_dataset.bq_dataset (expand)" references: []
+2022-10-23T21:49:39.785Z [DEBUG] ReferenceTransformer: "google_pubsub_topic.pubsub_topic (expand)" references: []
+2022-10-23T21:49:39.785Z [DEBUG] ReferenceTransformer: "google_storage_bucket_object.cloudfunction (expand)" references: []
+2022-10-23T21:49:39.786Z [DEBUG] ReferenceTransformer: "google_cloudfunctions_function.function (expand)" references: [google_pubsub_topic.pubsub_topic (expand) google_storage_bucket_object.cloudfunction (expand) google_pubsub_topic.pubsub_topic (expand)]
+2022-10-23T21:49:39.786Z [DEBUG] ReferenceTransformer: "var.project_id" references: []
+2022-10-23T21:49:39.786Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/google\"]" references: [var.region var.project_id]
+2022-10-23T21:49:39.786Z [DEBUG] ReferenceTransformer: "google_cloud_asset_project_feed.project_feed (expand)" references: [google_pubsub_topic.pubsub_topic (expand) var.project_id google_pubsub_topic.pubsub_topic (expand)]
+2022-10-23T21:49:39.788Z [DEBUG] Starting graph walk: walkPlan
+2022-10-23T21:49:39.789Z [DEBUG] created provider logger: level=debug
+2022-10-23T21:49:39.789Z [INFO]  provider: configuring client automatic mTLS
+2022-10-23T21:49:39.802Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5]
+2022-10-23T21:49:39.803Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5 pid=1994
+2022-10-23T21:49:39.804Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5
+2022-10-23T21:49:39.822Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: configuring server automatic mTLS: timestamp=2022-10-23T21:49:39.822Z
+2022-10-23T21:49:39.863Z [DEBUG] provider.terraform-provider-google_v4.41.0_x5: plugin address: address=/tmp/plugin3107366419 network=unix timestamp=2022-10-23T21:49:39.863Z
+2022-10-23T21:49:39.863Z [DEBUG] provider: using plugin: version=5
+2022-10-23T21:49:40.344Z [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/hashicorp/google\"]" changed the config value, but that value is unused
+2022-10-23T21:49:40.348Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [INFO] Authenticating using DefaultClient...: timestamp=2022-10-23T21:49:40.348Z
+2022-10-23T21:49:40.349Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [INFO]   -- Scopes: [https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/userinfo.email]: timestamp=2022-10-23T21:49:40.349Z
+2022-10-23T21:49:40.354Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [INFO] Authenticating using DefaultClient...: timestamp=2022-10-23T21:49:40.354Z
+2022-10-23T21:49:40.354Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [INFO]   -- Scopes: [https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/userinfo.email]: timestamp=2022-10-23T21:49:40.354Z
+2022-10-23T21:49:40.356Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Waiting for state to become: [success]: timestamp=2022-10-23T21:49:40.356Z
+2022-10-23T21:49:40.412Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [INFO] Terraform is using this identity: devopsuser7@roimoonbank.com: timestamp=2022-10-23T21:49:40.412Z
+2022-10-23T21:49:40.413Z [DEBUG] ReferenceTransformer: "google_bigquery_dataset.bq_dataset" references: []
+2022-10-23T21:49:40.413Z [DEBUG] ReferenceTransformer: "google_storage_bucket_object.cloudfunction" references: []
+2022-10-23T21:49:40.414Z [INFO]  ReferenceTransformer: reference not found: "var.project_id"
+2022-10-23T21:49:40.414Z [DEBUG] ReferenceTransformer: "google_storage_bucket.pluto_bucket" references: []
+2022-10-23T21:49:40.414Z [DEBUG] ReferenceTransformer: "google_pubsub_topic.pubsub_topic" references: []
+2022-10-23T21:49:40.424Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [INFO] Instantiating Google Storage client for path https://storage.googleapis.com/storage/v1/: timestamp=2022-10-23T21:49:40.424Z
+2022-10-23T21:49:40.425Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:49:40.425Z
+2022-10-23T21:49:40.425Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:49:40.425Z
+2022-10-23T21:49:40.432Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /storage/v1/b/mb-devops-user7-terraform/o/cloudfunction.zip?alt=json&prettyPrint=false HTTP/1.1
+Host: storage.googleapis.com
+User-Agent: google-api-go-client/0.5 Terraform/1.3.2 (+https://www.terraform.io) Terraform-Plugin-SDK/2.10.1 terraform-provider-google/dev
+X-Goog-Api-Client: gl-go/1.18.1 gdcl/0.92.0
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-10-23T21:49:40.425Z
+2022-10-23T21:49:40.432Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Waiting for state to become: [success]: timestamp=2022-10-23T21:49:40.426Z
+2022-10-23T21:49:40.432Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:49:40.426Z
+2022-10-23T21:49:40.432Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:49:40.426Z
+2022-10-23T21:49:40.432Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /v1/projects/mb-devops-user7/topics/activities?alt=json HTTP/1.1
+Host: pubsub.googleapis.com
+User-Agent: Terraform/1.3.2 (+https://www.terraform.io) Terraform-Plugin-SDK/2.10.1 terraform-provider-google/dev
+Content-Type: application/json
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-10-23T21:49:40.426Z
+2022-10-23T21:49:40.432Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Waiting for state to become: [success]: timestamp=2022-10-23T21:49:40.428Z
+2022-10-23T21:49:40.432Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [INFO] Instantiating Google Storage client for path https://storage.googleapis.com/storage/v1/: timestamp=2022-10-23T21:49:40.428Z
+2022-10-23T21:49:40.432Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:49:40.429Z
+2022-10-23T21:49:40.432Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:49:40.429Z
+2022-10-23T21:49:40.432Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /storage/v1/b/mb-devops-user7-bucket?alt=json&prettyPrint=false HTTP/1.1
+Host: storage.googleapis.com
+User-Agent: google-api-go-client/0.5 Terraform/1.3.2 (+https://www.terraform.io) Terraform-Plugin-SDK/2.10.1 terraform-provider-google/dev
+X-Goog-Api-Client: gl-go/1.18.1 gdcl/0.92.0
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-10-23T21:49:40.429Z
+2022-10-23T21:49:40.446Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Waiting for state to become: [success]: timestamp=2022-10-23T21:49:40.445Z
+2022-10-23T21:49:40.446Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:49:40.445Z
+2022-10-23T21:49:40.446Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:49:40.445Z
+2022-10-23T21:49:40.446Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /bigquery/v2/projects/mb-devops-user7/datasets/activities?alt=json HTTP/1.1
+Host: bigquery.googleapis.com
+User-Agent: Terraform/1.3.2 (+https://www.terraform.io) Terraform-Plugin-SDK/2.10.1 terraform-provider-google/dev
+Content-Type: application/json
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-10-23T21:49:40.445Z
+2022-10-23T21:49:40.478Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Content-Length: 745
+Cache-Control: private, max-age=0, must-revalidate, no-transform
+Content-Type: application/json; charset=UTF-8
+Date: Sun, 23 Oct 2022 21:49:40 GMT
+Etag: CJjjwZKl9/oCEAE=
+Expires: Sun, 23 Oct 2022 21:49:40 GMT
+Server: UploadServer
+Vary: Origin
+Vary: X-Origin
+X-Guploader-Uploadid: ADPycdtlkoqmofXRuTr70pxad_Lz1MfEqPbSptWb-2Ii5uRUglfZJKf_dqs7ugtl1e_F0-V60hBvAakJ8I0gIT2b6NU0qQ
+
+{
+ "kind": "storage#object",
+ "id": "mb-devops-user7-terraform/cloudfunction.zip/1666560361001368",
+ "selfLink": "https://www.googleapis.com/storage/v1/b/mb-devops-user7-terraform/o/cloudfunction.zip",
+ "mediaLink": "https://storage.googleapis.com/download/storage/v1/b/mb-devops-user7-terraform/o/cloudfunction.zip?generation=1666560361001368&alt=media",
+ "name": "cloudfunction.zip",
+ "bucket": "mb-devops-user7-terraform",
+ "generation": "1666560361001368",
+ "metageneration": "1",
+ "contentType": "application/zip",
+ "storageClass": "STANDARD",
+ "size": "751",
+ "md5Hash": "TbYhlvzfBj+DcU4SvejHBg==",
+ "crc32c": "35nu9A==",
+ "etag": "CJjjwZKl9/oCEAE=",
+ "timeCreated": "2022-10-23T21:26:01.039Z",
+ "updated": "2022-10-23T21:26:01.039Z",
+ "timeStorageClassUpdated": "2022-10-23T21:26:01.039Z"
+}
+-----------------------------------------------------: timestamp=2022-10-23T21:49:40.477Z
+2022-10-23T21:49:40.478Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:49:40.478Z
+2022-10-23T21:49:40.478Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:49:40.478Z
+2022-10-23T21:49:40.486Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_storage_bucket_object.cloudfunction, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .content_language: planned value cty.StringVal("") for a non-computed attribute
+      - .event_based_hold: planned value cty.False for a non-computed attribute
+      - .metadata: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+      - .content_disposition: planned value cty.StringVal("") for a non-computed attribute
+      - .detect_md5hash: planned value cty.StringVal("TbYhlvzfBj+DcU4SvejHBg==") for a non-computed attribute
+      - .temporary_hold: planned value cty.False for a non-computed attribute
+      - .cache_control: planned value cty.StringVal("") for a non-computed attribute
+      - .content_encoding: planned value cty.StringVal("") for a non-computed attribute
+2022-10-23T21:49:40.522Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Sun, 23 Oct 2022 21:49:40 GMT
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+  "name": "projects/mb-devops-user7/topics/activities",
+  "messageRetentionDuration": "86600s"
+}
+
+-----------------------------------------------------: timestamp=2022-10-23T21:49:40.522Z
+2022-10-23T21:49:40.523Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:49:40.522Z
+2022-10-23T21:49:40.523Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:49:40.523Z
+2022-10-23T21:49:40.534Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_pubsub_topic.pubsub_topic, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .kms_key_name: planned value cty.StringVal("") for a non-computed attribute
+      - .labels: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+2022-10-23T21:49:40.535Z [INFO]  ReferenceTransformer: reference not found: "google_pubsub_topic.pubsub_topic"
+2022-10-23T21:49:40.535Z [DEBUG] ReferenceTransformer: "google_pubsub_subscription.pubsub_sub" references: []
+2022-10-23T21:49:40.536Z [INFO]  ReferenceTransformer: reference not found: "google_pubsub_topic.pubsub_topic"
+2022-10-23T21:49:40.536Z [DEBUG] ReferenceTransformer: "google_cloudfunctions_function.function" references: []
+2022-10-23T21:49:40.536Z [INFO]  ReferenceTransformer: reference not found: "google_pubsub_topic.pubsub_topic"
+2022-10-23T21:49:40.536Z [INFO]  ReferenceTransformer: reference not found: "var.project_id"
+2022-10-23T21:49:40.536Z [DEBUG] ReferenceTransformer: "google_cloud_asset_project_feed.project_feed" references: []
+2022-10-23T21:49:40.543Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Waiting for state to become: [success]: timestamp=2022-10-23T21:49:40.542Z
+2022-10-23T21:49:40.543Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:49:40.543Z
+2022-10-23T21:49:40.543Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:49:40.543Z
+2022-10-23T21:49:40.543Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /v1/projects/mb-devops-user7/subscriptions/activites-catchall?alt=json HTTP/1.1
+Host: pubsub.googleapis.com
+User-Agent: Terraform/1.3.2 (+https://www.terraform.io) Terraform-Plugin-SDK/2.10.1 terraform-provider-google/dev
+Content-Type: application/json
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-10-23T21:49:40.543Z
+2022-10-23T21:49:40.546Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] matching ID projects/mb-devops-user7/locations/us-central1/functions/activities-function to regex projects/(?P<project>[^/]+)/locations/(?P<region>[^/]+)/functions/(?P<name>[^/]+).: timestamp=2022-10-23T21:49:40.545Z
+2022-10-23T21:49:40.546Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] importing project = mb-devops-user7: timestamp=2022-10-23T21:49:40.545Z
+2022-10-23T21:49:40.546Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] importing region = us-central1: timestamp=2022-10-23T21:49:40.545Z
+2022-10-23T21:49:40.546Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] importing name = activities-function: timestamp=2022-10-23T21:49:40.545Z
+2022-10-23T21:49:40.546Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [INFO] Instantiating Google Cloud CloudFunctions Client for path https://cloudfunctions.googleapis.com/: timestamp=2022-10-23T21:49:40.545Z
+2022-10-23T21:49:40.546Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:49:40.545Z
+2022-10-23T21:49:40.546Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:49:40.546Z
+2022-10-23T21:49:40.547Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /v1/projects/mb-devops-user7/locations/us-central1/functions/activities-function?alt=json&prettyPrint=false HTTP/1.1
+Host: cloudfunctions.googleapis.com
+User-Agent: google-api-go-client/0.5 Terraform/1.3.2 (+https://www.terraform.io) Terraform-Plugin-SDK/2.10.1 terraform-provider-google/dev
+X-Goog-Api-Client: gl-go/1.18.1 gdcl/0.92.0
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-10-23T21:49:40.546Z
+2022-10-23T21:49:40.549Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Waiting for state to become: [success]: timestamp=2022-10-23T21:49:40.549Z
+2022-10-23T21:49:40.550Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:49:40.550Z
+2022-10-23T21:49:40.550Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:49:40.550Z
+2022-10-23T21:49:40.550Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /v1/projects/1020549290667/feeds/asset-feed?alt=json HTTP/1.1
+Host: cloudasset.googleapis.com
+User-Agent: Terraform/1.3.2 (+https://www.terraform.io) Terraform-Plugin-SDK/2.10.1 terraform-provider-google/dev
+Content-Type: application/json
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-10-23T21:49:40.550Z
+2022-10-23T21:49:40.634Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Sun, 23 Oct 2022 21:49:40 GMT
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+  "name": "projects/1020549290667/feeds/asset-feed",
+  "assetTypes": [
+    "compute.googleapis.com/Autoscaler",
+    "compute.googleapis.com/Address",
+    "compute.googleapis.com/GlobalAddress",
+    "compute.googleapis.com/BackendBucket",
+    "compute.googleapis.com/BackendService",
+    "compute.googleapis.com/Commitment",
+    "compute.googleapis.com/Disk",
+    "compute.googleapis.com/ExternalVpnGateway",
+    "compute.googleapis.com/Firewall",
+    "compute.googleapis.com/FirewallPolicy",
+    "compute.googleapis.com/ForwardingRule",
+    "compute.googleapis.com/GlobalForwardingRule",
+    "compute.googleapis.com/HealthCheck",
+    "compute.googleapis.com/HttpHealthCheck",
+    "compute.googleapis.com/HttpsHealthCheck",
+    "compute.googleapis.com/Image",
+    "compute.googleapis.com/Instance",
+    "compute.googleapis.com/InstanceGroup",
+    "compute.googleapis.com/InstanceGroupManager",
+    "compute.googleapis.com/InstanceTemplate",
+    "compute.googleapis.com/Interconnect",
+    "compute.googleapis.com/InterconnectAttachment",
+    "compute.googleapis.com/License",
+    "compute.googleapis.com/Network",
+    "compute.googleapis.com/NetworkEndpointGroup",
+    "compute.googleapis.com/NodeTemplate",
+    "compute.googleapis.com/PacketMirroring",
+    "compute.googleapis.com/Project",
+    "compute.googleapis.com/RegionBackendService",
+    "compute.googleapis.com/RegionDisk",
+    "compute.googleapis.com/Reservation",
+    "compute.googleapis.com/ResourcePolicy",
+    "compute.googleapis.com/Route",
+    "compute.googleapis.com/Router",
+    "compute.googleapis.com/SecurityPolicy",
+    "compute.googleapis.com/ServiceAttachment",
+    "compute.googleapis.com/Snapshot",
+    "compute.googleapis.com/SslCertificate",
+    "compute.googleapis.com/SslPolicy",
+    "compute.googleapis.com/Subnetwork",
+    "compute.googleapis.com/TargetHttpProxy",
+    "compute.googleapis.com/TargetHttpsProxy",
+    "compute.googleapis.com/TargetInstance",
+    "compute.googleapis.com/TargetPool",
+    "compute.googleapis.com/TargetTcpProxy",
+    "compute.googleapis.com/TargetSslProxy",
+    "compute.googleapis.com/TargetVpnGateway",
+    "compute.googleapis.com/UrlMap",
+    "compute.googleapis.com/VpnGateway",
+"compute.googleapis.com/VpnTunnel"
+  ],
+  "contentType": "RESOURCE",
+  "feedOutputConfig": {
+    "pubsubDestination": {
+      "topic": "projects/mb-devops-user7/topics/activities"
+    }
+  }
+}
+
+-----------------------------------------------------: timestamp=2022-10-23T21:49:40.634Z
+2022-10-23T21:49:40.635Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:49:40.634Z
+2022-10-23T21:49:40.635Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:49:40.634Z
+2022-10-23T21:49:40.643Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_cloud_asset_project_feed.project_feed, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .asset_names: planned value cty.ListValEmpty(cty.String) for a non-computed attribute
+2022-10-23T21:49:40.661Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Sun, 23 Oct 2022 21:49:40 GMT
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+  "name": "projects/mb-devops-user7/subscriptions/activites-catchall",
+  "topic": "projects/mb-devops-user7/topics/activities",
+  "pushConfig": {},
+  "ackDeadlineSeconds": 20,
+  "messageRetentionDuration": "604800s",
+  "expirationPolicy": {
+    "ttl": "2678400s"
+  },
+  "topicMessageRetentionDuration": "86600s",
+  "state": "ACTIVE"
+}
+
+-----------------------------------------------------: timestamp=2022-10-23T21:49:40.661Z
+2022-10-23T21:49:40.662Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:49:40.661Z
+2022-10-23T21:49:40.662Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:49:40.661Z
+2022-10-23T21:49:40.669Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_pubsub_subscription.pubsub_sub, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .enable_exactly_once_delivery: planned value cty.False for a non-computed attribute
+      - .filter: planned value cty.StringVal("") for a non-computed attribute
+      - .labels: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+      - .message_retention_duration: planned value cty.StringVal("604800s") for a non-computed attribute
+      - .retain_acked_messages: planned value cty.False for a non-computed attribute
+      - .enable_message_ordering: planned value cty.False for a non-computed attribute
+      - .expiration_policy: block count in plan (1) disagrees with count in config (0)
+2022-10-23T21:49:40.696Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Content-Length: 554
+Cache-Control: private, max-age=0, must-revalidate, no-transform
+Content-Type: application/json; charset=UTF-8
+Date: Sun, 23 Oct 2022 21:49:40 GMT
+Etag: CAE=
+Expires: Sun, 23 Oct 2022 21:49:40 GMT
+Server: UploadServer
+Vary: Origin
+Vary: X-Origin
+X-Guploader-Uploadid: ADPycdtUb-t0nz1QMNRUxNgDFgvhw3SBOefjY2KIly6gZMEOxxxdNnUVhs6CF5xqHZo4V-kykzsEFgtwBTq3TAL92eGS
+
+{
+ "kind": "storage#bucket",
+ "selfLink": "https://www.googleapis.com/storage/v1/b/mb-devops-user7-bucket",
+ "id": "mb-devops-user7-bucket",
+ "name": "mb-devops-user7-bucket",
+ "projectNumber": "1020549290667",
+ "metageneration": "1",
+ "location": "US-CENTRAL1",
+ "storageClass": "STANDARD",
+ "etag": "CAE=",
+ "timeCreated": "2022-10-23T21:26:01.463Z",
+ "updated": "2022-10-23T21:26:01.463Z",
+ "versioning": {
+  "enabled": false
+ },
+ "iamConfiguration": {
+  "bucketPolicyOnly": {
+   "enabled": false
+  },
+  "uniformBucketLevelAccess": {
+   "enabled": false
+  },
+  "publicAccessPrevention": "inherited"
+ },
+ "locationType": "region"
+}
+-----------------------------------------------------: timestamp=2022-10-23T21:49:40.696Z
+2022-10-23T21:49:40.696Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:49:40.696Z
+2022-10-23T21:49:40.697Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:49:40.696Z
+2022-10-23T21:49:40.697Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Read bucket mb-devops-user7-bucket at location https://www.googleapis.com/storage/v1/b/mb-devops-user7-bucket: timestamp=2022-10-23T21:49:40.696Z
+2022-10-23T21:49:40.711Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_storage_bucket.pluto_bucket, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .default_event_based_hold: planned value cty.False for a non-computed attribute
+      - .labels: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+      - .force_destroy: planned value cty.False for a non-computed attribute
+      - .requester_pays: planned value cty.False for a non-computed attribute
+      - .storage_class: planned value cty.StringVal("STANDARD") for a non-computed attribute
+2022-10-23T21:49:40.735Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Sun, 23 Oct 2022 21:49:40 GMT
+Etag: wvwC+5oEIPz39GHnvFqYBQ==
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+  "kind": "bigquery#dataset",
+  "etag": "wvwC+5oEIPz39GHnvFqYBQ==",
+  "id": "mb-devops-user7:activities",
+  "selfLink": "https://bigquery.googleapis.com/bigquery/v2/projects/mb-devops-user7/datasets/activities",
+  "datasetReference": {
+    "datasetId": "activities",
+    "projectId": "mb-devops-user7"
+  },
+  "friendlyName": "activities",
+  "description": "Moonbank activities dataset",
+  "defaultTableExpirationMs": "3600000",
+  "access": [
+    {
+      "role": "WRITER",
+      "specialGroup": "projectWriters"
+    },
+    {
+      "role": "OWNER",
+      "specialGroup": "projectOwners"
+    },
+    {
+      "role": "OWNER",
+      "userByEmail": "devopsuser7@roimoonbank.com"
+    },
+    {
+      "role": "READER",
+      "specialGroup": "projectReaders"
+    }
+  ],
+  "creationTime": "1666560361344",
+  "lastModifiedTime": "1666560361344",
+  "location": "US",
+  "type": "DEFAULT"
+}
+
+-----------------------------------------------------: timestamp=2022-10-23T21:49:40.735Z
+2022-10-23T21:49:40.735Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:49:40.735Z
+2022-10-23T21:49:40.735Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:49:40.735Z
+2022-10-23T21:49:40.745Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_bigquery_dataset.bq_dataset, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .delete_contents_on_destroy: planned value cty.False for a non-computed attribute
+      - .labels: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+      - .default_partition_expiration_ms: planned value cty.NumberIntVal(0) for a non-computed attribute
+2022-10-23T21:49:40.749Z [INFO]  ReferenceTransformer: reference not found: "google_bigquery_dataset.bq_dataset"
+2022-10-23T21:49:40.749Z [DEBUG] ReferenceTransformer: "google_bigquery_table.bq_table" references: []
+2022-10-23T21:49:40.754Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [INFO] Reading BigQuery table: projects/mb-devops-user7/datasets/activities/tables/resources: timestamp=2022-10-23T21:49:40.754Z
+2022-10-23T21:49:40.755Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [INFO] Instantiating Google Cloud BigQuery client for path https://bigquery.googleapis.com/bigquery/v2/: timestamp=2022-10-23T21:49:40.755Z
+2022-10-23T21:49:40.755Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:49:40.755Z
+2022-10-23T21:49:40.755Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:49:40.755Z
+2022-10-23T21:49:40.755Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:49:40.755Z
+2022-10-23T21:49:40.756Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:49:40.755Z
+2022-10-23T21:49:40.756Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /bigquery/v2/projects/mb-devops-user7/datasets/activities/tables/resources?alt=json&prettyPrint=false HTTP/1.1
+Host: bigquery.googleapis.com
+User-Agent: google-api-go-client/0.5 Terraform/1.3.2 (+https://www.terraform.io) Terraform-Plugin-SDK/2.10.1 terraform-provider-google/dev
+X-Goog-Api-Client: gl-go/1.18.1 gdcl/0.92.0
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-10-23T21:49:40.756Z
+2022-10-23T21:49:40.830Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Sun, 23 Oct 2022 21:49:40 GMT
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+ "name": "projects/mb-devops-user7/locations/us-central1/functions/activities-function",
+ "description": "Capture activities from pubsub and push into BQ",
+ "sourceArchiveUrl": "gs://mb-devops-user7/cloudfunction.zip",
+ "eventTrigger": {
+  "eventType": "google.pubsub.topic.publish",
+  "resource": "projects/mb-devops-user7/topics/activities",
+  "service": "pubsub.googleapis.com",
+  "failurePolicy": {}
+ },
+ "status": "UNKNOWN",
+ "entryPoint": "activities-function",
+ "timeout": "60s",
+ "availableMemoryMb": 128,
+ "serviceAccountEmail": "mb-devops-user7@appspot.gserviceaccount.com",
+ "updateTime": "2022-10-23T21:47:13.015Z",
+ "versionId": "1",
+ "runtime": "python39",
+ "ingressSettings": "ALLOW_ALL",
+ "dockerRegistry": "CONTAINER_REGISTRY"
+}
+-----------------------------------------------------: timestamp=2022-10-23T21:49:40.829Z
+2022-10-23T21:49:40.830Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:49:40.829Z
+2022-10-23T21:49:40.830Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:49:40.829Z
+2022-10-23T21:49:40.838Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an unexpected new value for google_cloudfunctions_function.function during refresh.
+      - .entry_point: was null, but now cty.StringVal("activities-function")
+      - .region: was null, but now cty.StringVal("us-central1")
+      - .docker_repository: was null, but now cty.StringVal("")
+      - .kms_key_name: was null, but now cty.StringVal("")
+      - .min_instances: was null, but now cty.NumberIntVal(0)
+      - .project: was null, but now cty.StringVal("mb-devops-user7")
+      - .docker_registry: was null, but now cty.StringVal("CONTAINER_REGISTRY")
+      - .vpc_connector: was null, but now cty.StringVal("")
+      - .vpc_connector_egress_settings: was null, but now cty.StringVal("")
+      - .environment_variables: was null, but now cty.MapValEmpty(cty.String)
+      - .service_account_email: was null, but now cty.StringVal("mb-devops-user7@appspot.gserviceaccount.com")
+      - .build_worker_pool: was null, but now cty.StringVal("")
+      - .labels: was null, but now cty.MapValEmpty(cty.String)
+      - .event_trigger[0].resource: was cty.StringVal("activities"), but now cty.StringVal("projects/mb-devops-user7/topics/activities")
+      - .event_trigger[0].failure_policy: block count changed from 0 to 1
+2022-10-23T21:49:40.846Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_cloudfunctions_function.function, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .max_instances: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .ingress_settings: planned value cty.StringVal("ALLOW_ALL") for a non-computed attribute
+      - .event_trigger[0].failure_policy: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+2022-10-23T21:49:40.992Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Sun, 23 Oct 2022 21:49:40 GMT
+Etag: 5gVBHBhkaOJPog6dYyEKnw==
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+ "kind": "bigquery#table",
+ "etag": "5gVBHBhkaOJPog6dYyEKnw==",
+ "id": "mb-devops-user7:activities.resources",
+ "selfLink": "https://bigquery.googleapis.com/bigquery/v2/projects/mb-devops-user7/datasets/activities/tables/resources",
+ "tableReference": {
+  "projectId": "mb-devops-user7",
+  "datasetId": "activities",
+  "tableId": "resources"
+ },
+ "schema": {
+  "fields": [
+   {
+    "name": "messages",
+    "type": "STRING"
+   }
+  ]
+ },
+ "numBytes": "0",
+ "numLongTermBytes": "0",
+ "numRows": "0",
+ "creationTime": "1666560361955",
+ "expirationTime": "1666563961955",
+ "lastModifiedTime": "1666560362092",
+ "type": "TABLE",
+ "location": "US",
+ "numTotalLogicalBytes": "0",
+ "numActiveLogicalBytes": "0",
+ "numLongTermLogicalBytes": "0"
+}
+-----------------------------------------------------: timestamp=2022-10-23T21:49:40.992Z
+2022-10-23T21:49:40.993Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:49:40.993Z
+2022-10-23T21:49:40.993Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:49:40.993Z
+2022-10-23T21:49:40.993Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:49:40.993Z
+2022-10-23T21:49:40.993Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:40 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:49:40.993Z
+2022-10-23T21:49:41.012Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_bigquery_table.bq_table, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .description: planned value cty.StringVal("") for a non-computed attribute
+      - .friendly_name: planned value cty.StringVal("") for a non-computed attribute
+      - .labels: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+2022-10-23T21:49:41.015Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2022-10-23T21:49:41.016Z [DEBUG] provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:41 [DEBUG] [transport] transport: http2Server.HandleStreams failed to read frame: read unix /tmp/plugin3107366419->@: use of closed network connection 
+2022-10-23T21:49:41.021Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5 pid=1994
+2022-10-23T21:49:41.021Z [DEBUG] provider: plugin exited
+2022-10-23T21:49:41.027Z [DEBUG] building apply graph to check for errors
+2022-10-23T21:49:41.028Z [DEBUG] ProviderTransformer: "google_pubsub_subscription.pubsub_sub" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:41.028Z [DEBUG] ProviderTransformer: "google_bigquery_table.bq_table (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:41.029Z [DEBUG] ProviderTransformer: "google_pubsub_topic.pubsub_topic" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:41.029Z [DEBUG] ProviderTransformer: "google_bigquery_dataset.bq_dataset (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:41.029Z [DEBUG] ProviderTransformer: "google_bigquery_table.bq_table" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:41.029Z [DEBUG] ProviderTransformer: "google_pubsub_subscription.pubsub_sub (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:41.029Z [DEBUG] ProviderTransformer: "google_storage_bucket.pluto_bucket" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:41.029Z [DEBUG] ProviderTransformer: "google_storage_bucket_object.cloudfunction" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:41.029Z [DEBUG] ProviderTransformer: "google_cloud_asset_project_feed.project_feed (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:41.029Z [DEBUG] ProviderTransformer: "google_cloudfunctions_function.function (destroy)" (*terraform.NodeDestroyResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:41.029Z [DEBUG] ProviderTransformer: "google_pubsub_topic.pubsub_topic (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:41.029Z [DEBUG] ProviderTransformer: "google_storage_bucket_object.cloudfunction (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:41.029Z [DEBUG] ProviderTransformer: "google_storage_bucket.pluto_bucket (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:41.029Z [DEBUG] ProviderTransformer: "google_cloudfunctions_function.function (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:41.029Z [DEBUG] ProviderTransformer: "google_cloud_asset_project_feed.project_feed" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:41.029Z [DEBUG] ProviderTransformer: "google_cloudfunctions_function.function" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:41.029Z [DEBUG] ProviderTransformer: "google_bigquery_dataset.bq_dataset" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:41.030Z [INFO]  ReferenceTransformer: reference not found: "google_pubsub_topic.pubsub_topic#destroy"
+2022-10-23T21:49:41.030Z [DEBUG] ReferenceTransformer: "google_cloudfunctions_function.function" references: [google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic (expand) google_storage_bucket_object.cloudfunction (expand) google_storage_bucket_object.cloudfunction google_storage_bucket_object.cloudfunction google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic (expand)]
+2022-10-23T21:49:41.030Z [DEBUG] ReferenceTransformer: "google_bigquery_table.bq_table (expand)" references: []
+2022-10-23T21:49:41.030Z [DEBUG] ReferenceTransformer: "google_cloudfunctions_function.function (expand)" references: []
+2022-10-23T21:49:41.030Z [DEBUG] ReferenceTransformer: "google_cloud_asset_project_feed.project_feed (expand)" references: []
+2022-10-23T21:49:41.031Z [INFO]  ReferenceTransformer: reference not found: "google_pubsub_topic.pubsub_topic#destroy"
+2022-10-23T21:49:41.031Z [DEBUG] ReferenceTransformer: "google_cloud_asset_project_feed.project_feed" references: [google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic (expand) var.project_id google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic (expand)]
+2022-10-23T21:49:41.031Z [DEBUG] ReferenceTransformer: "google_pubsub_topic.pubsub_topic" references: []
+2022-10-23T21:49:41.031Z [DEBUG] ReferenceTransformer: "google_bigquery_dataset.bq_dataset" references: []
+2022-10-23T21:49:41.031Z [DEBUG] ReferenceTransformer: "google_pubsub_topic.pubsub_topic (expand)" references: []
+2022-10-23T21:49:41.031Z [DEBUG] ReferenceTransformer: "google_pubsub_subscription.pubsub_sub (expand)" references: []
+2022-10-23T21:49:41.031Z [DEBUG] ReferenceTransformer: "google_storage_bucket_object.cloudfunction (expand)" references: []
+2022-10-23T21:49:41.031Z [DEBUG] ReferenceTransformer: "var.project_id" references: []
+2022-10-23T21:49:41.031Z [INFO]  ReferenceTransformer: reference not found: "google_bigquery_dataset.bq_dataset#destroy"
+2022-10-23T21:49:41.031Z [DEBUG] ReferenceTransformer: "google_bigquery_table.bq_table" references: [google_bigquery_dataset.bq_dataset google_bigquery_dataset.bq_dataset google_bigquery_dataset.bq_dataset (expand) google_bigquery_dataset.bq_dataset google_bigquery_dataset.bq_dataset google_bigquery_dataset.bq_dataset (expand)]
+2022-10-23T21:49:41.031Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/google\"]" references: [var.project_id var.region]
+2022-10-23T21:49:41.031Z [DEBUG] ReferenceTransformer: "google_storage_bucket.pluto_bucket (expand)" references: []
+2022-10-23T21:49:41.031Z [DEBUG] ReferenceTransformer: "google_bigquery_dataset.bq_dataset (expand)" references: []
+2022-10-23T21:49:41.031Z [INFO]  ReferenceTransformer: reference not found: "google_pubsub_topic.pubsub_topic#destroy"
+2022-10-23T21:49:41.031Z [DEBUG] ReferenceTransformer: "google_pubsub_subscription.pubsub_sub" references: [google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic (expand) google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic (expand)]
+2022-10-23T21:49:41.031Z [DEBUG] ReferenceTransformer: "google_storage_bucket.pluto_bucket" references: [var.project_id]
+2022-10-23T21:49:41.031Z [DEBUG] ReferenceTransformer: "var.region" references: []
+2022-10-23T21:49:41.031Z [DEBUG] ReferenceTransformer: "google_storage_bucket_object.cloudfunction" references: []
+2022-10-23T21:49:41.032Z [DEBUG] DestroyEdgeTransformer2: google_pubsub_topic.pubsub_topic has stored dependency of google_cloudfunctions_function.function (destroy)
+2022-10-23T21:49:41.032Z [DEBUG] DestroyEdgeTransformer2: google_storage_bucket_object.cloudfunction has stored dependency of google_cloudfunctions_function.function (destroy)
+2022-10-23T21:49:41.093Z [DEBUG] command: asking for input: "\nDo you want to perform these actions in workspace \"dev\"?"
+2022-10-23T21:49:43.312Z [INFO]  backend/local: apply calling Apply
+2022-10-23T21:49:43.314Z [DEBUG] Building and walking apply graph for NormalMode plan
+2022-10-23T21:49:43.315Z [DEBUG] ProviderTransformer: "google_storage_bucket.pluto_bucket (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:43.315Z [DEBUG] ProviderTransformer: "google_storage_bucket_object.cloudfunction" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:43.315Z [DEBUG] ProviderTransformer: "google_pubsub_subscription.pubsub_sub" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:43.315Z [DEBUG] ProviderTransformer: "google_cloud_asset_project_feed.project_feed (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:43.315Z [DEBUG] ProviderTransformer: "google_storage_bucket_object.cloudfunction (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:43.315Z [DEBUG] ProviderTransformer: "google_cloud_asset_project_feed.project_feed" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:43.315Z [DEBUG] ProviderTransformer: "google_pubsub_topic.pubsub_topic" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:43.315Z [DEBUG] ProviderTransformer: "google_cloudfunctions_function.function" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:43.315Z [DEBUG] ProviderTransformer: "google_bigquery_table.bq_table (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:43.316Z [DEBUG] ProviderTransformer: "google_storage_bucket.pluto_bucket" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:43.316Z [DEBUG] ProviderTransformer: "google_cloudfunctions_function.function (destroy)" (*terraform.NodeDestroyResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:43.316Z [DEBUG] ProviderTransformer: "google_pubsub_topic.pubsub_topic (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:43.316Z [DEBUG] ProviderTransformer: "google_bigquery_table.bq_table" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:43.316Z [DEBUG] ProviderTransformer: "google_cloudfunctions_function.function (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:43.316Z [DEBUG] ProviderTransformer: "google_bigquery_dataset.bq_dataset" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:43.316Z [DEBUG] ProviderTransformer: "google_bigquery_dataset.bq_dataset (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:43.316Z [DEBUG] ProviderTransformer: "google_pubsub_subscription.pubsub_sub (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/hashicorp/google"]
+2022-10-23T21:49:43.317Z [DEBUG] ReferenceTransformer: "google_storage_bucket.pluto_bucket (expand)" references: []
+2022-10-23T21:49:43.317Z [DEBUG] ReferenceTransformer: "google_bigquery_table.bq_table (expand)" references: []
+2022-10-23T21:49:43.317Z [DEBUG] ReferenceTransformer: "google_storage_bucket.pluto_bucket" references: [var.project_id]
+2022-10-23T21:49:43.317Z [DEBUG] ReferenceTransformer: "google_bigquery_dataset.bq_dataset" references: []
+2022-10-23T21:49:43.317Z [INFO]  ReferenceTransformer: reference not found: "google_bigquery_dataset.bq_dataset#destroy"
+2022-10-23T21:49:43.317Z [DEBUG] ReferenceTransformer: "google_bigquery_table.bq_table" references: [google_bigquery_dataset.bq_dataset google_bigquery_dataset.bq_dataset google_bigquery_dataset.bq_dataset (expand) google_bigquery_dataset.bq_dataset google_bigquery_dataset.bq_dataset google_bigquery_dataset.bq_dataset (expand)]
+2022-10-23T21:49:43.318Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/hashicorp/google\"]" references: [var.project_id var.region]
+2022-10-23T21:49:43.318Z [DEBUG] ReferenceTransformer: "google_pubsub_topic.pubsub_topic (expand)" references: []
+2022-10-23T21:49:43.318Z [DEBUG] ReferenceTransformer: "google_storage_bucket_object.cloudfunction (expand)" references: []
+2022-10-23T21:49:43.318Z [DEBUG] ReferenceTransformer: "google_storage_bucket_object.cloudfunction" references: []
+2022-10-23T21:49:43.318Z [INFO]  ReferenceTransformer: reference not found: "google_pubsub_topic.pubsub_topic#destroy"
+2022-10-23T21:49:43.318Z [DEBUG] ReferenceTransformer: "google_cloud_asset_project_feed.project_feed" references: [google_pubsub_topic.pubsub_topic (expand) google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic var.project_id google_pubsub_topic.pubsub_topic (expand) google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic]
+2022-10-23T21:49:43.318Z [INFO]  ReferenceTransformer: reference not found: "google_pubsub_topic.pubsub_topic#destroy"
+2022-10-23T21:49:43.318Z [DEBUG] ReferenceTransformer: "google_pubsub_subscription.pubsub_sub" references: [google_pubsub_topic.pubsub_topic (expand) google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic (expand) google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic]
+2022-10-23T21:49:43.318Z [DEBUG] ReferenceTransformer: "google_cloudfunctions_function.function (expand)" references: []
+2022-10-23T21:49:43.318Z [DEBUG] ReferenceTransformer: "var.region" references: []
+2022-10-23T21:49:43.318Z [DEBUG] ReferenceTransformer: "var.project_id" references: []
+2022-10-23T21:49:43.318Z [DEBUG] ReferenceTransformer: "google_cloud_asset_project_feed.project_feed (expand)" references: []
+2022-10-23T21:49:43.318Z [DEBUG] ReferenceTransformer: "google_bigquery_dataset.bq_dataset (expand)" references: []
+2022-10-23T21:49:43.318Z [DEBUG] ReferenceTransformer: "google_pubsub_subscription.pubsub_sub (expand)" references: []
+2022-10-23T21:49:43.318Z [DEBUG] ReferenceTransformer: "google_pubsub_topic.pubsub_topic" references: []
+2022-10-23T21:49:43.318Z [INFO]  ReferenceTransformer: reference not found: "google_pubsub_topic.pubsub_topic#destroy"
+2022-10-23T21:49:43.318Z [DEBUG] ReferenceTransformer: "google_cloudfunctions_function.function" references: [google_pubsub_topic.pubsub_topic (expand) google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic google_storage_bucket_object.cloudfunction (expand) google_storage_bucket_object.cloudfunction google_storage_bucket_object.cloudfunction google_pubsub_topic.pubsub_topic (expand) google_pubsub_topic.pubsub_topic google_pubsub_topic.pubsub_topic]
+2022-10-23T21:49:43.319Z [DEBUG] DestroyEdgeTransformer2: google_pubsub_topic.pubsub_topic has stored dependency of google_cloudfunctions_function.function (destroy)
+2022-10-23T21:49:43.319Z [DEBUG] DestroyEdgeTransformer2: google_storage_bucket_object.cloudfunction has stored dependency of google_cloudfunctions_function.function (destroy)
+2022-10-23T21:49:43.321Z [DEBUG] Starting graph walk: walkApply
+2022-10-23T21:49:43.322Z [DEBUG] created provider logger: level=debug
+2022-10-23T21:49:43.322Z [INFO]  provider: configuring client automatic mTLS
+2022-10-23T21:49:43.335Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5 args=[.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5]
+2022-10-23T21:49:43.335Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5 pid=2028
+2022-10-23T21:49:43.336Z [DEBUG] provider: waiting for RPC address: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5
+2022-10-23T21:49:43.359Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: configuring server automatic mTLS: timestamp=2022-10-23T21:49:43.358Z
+2022-10-23T21:49:43.409Z [DEBUG] provider.terraform-provider-google_v4.41.0_x5: plugin address: address=/tmp/plugin1787480463 network=unix timestamp=2022-10-23T21:49:43.409Z
+2022-10-23T21:49:43.409Z [DEBUG] provider: using plugin: version=5
+2022-10-23T21:49:43.796Z [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/hashicorp/google\"]" changed the config value, but that value is unused
+2022-10-23T21:49:43.801Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:43 [INFO] Authenticating using DefaultClient...: timestamp=2022-10-23T21:49:43.799Z
+2022-10-23T21:49:43.802Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:43 [INFO]   -- Scopes: [https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/userinfo.email]: timestamp=2022-10-23T21:49:43.799Z
+2022-10-23T21:49:43.804Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:43 [INFO] Authenticating using DefaultClient...: timestamp=2022-10-23T21:49:43.803Z
+2022-10-23T21:49:43.804Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:43 [INFO]   -- Scopes: [https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/userinfo.email]: timestamp=2022-10-23T21:49:43.803Z
+2022-10-23T21:49:43.805Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:43 [DEBUG] Waiting for state to become: [success]: timestamp=2022-10-23T21:49:43.805Z
+2022-10-23T21:49:43.857Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:43 [INFO] Terraform is using this identity: devopsuser7@roimoonbank.com: timestamp=2022-10-23T21:49:43.857Z
+2022-10-23T21:49:43.867Z [INFO]  Starting apply for google_cloudfunctions_function.function
+2022-10-23T21:49:43.867Z [DEBUG] google_cloudfunctions_function.function: applying the planned Delete change
+2022-10-23T21:49:43.873Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:43 [DEBUG] matching ID projects/mb-devops-user7/locations/us-central1/functions/activities-function to regex projects/(?P<project>[^/]+)/locations/(?P<region>[^/]+)/functions/(?P<name>[^/]+).: timestamp=2022-10-23T21:49:43.873Z
+2022-10-23T21:49:43.873Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:43 [DEBUG] importing project = mb-devops-user7: timestamp=2022-10-23T21:49:43.873Z
+2022-10-23T21:49:43.874Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:43 [DEBUG] importing region = us-central1: timestamp=2022-10-23T21:49:43.873Z
+2022-10-23T21:49:43.874Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:43 [DEBUG] importing name = activities-function: timestamp=2022-10-23T21:49:43.873Z
+2022-10-23T21:49:43.874Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:43 [INFO] Instantiating Google Cloud CloudFunctions Client for path https://cloudfunctions.googleapis.com/: timestamp=2022-10-23T21:49:43.873Z
+2022-10-23T21:49:43.874Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:43 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:49:43.874Z
+2022-10-23T21:49:43.874Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:43 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:49:43.874Z
+2022-10-23T21:49:43.875Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:43 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+DELETE /v1/projects/mb-devops-user7/locations/us-central1/functions/activities-function?alt=json&prettyPrint=false HTTP/1.1
+Host: cloudfunctions.googleapis.com
+User-Agent: google-api-go-client/0.5 Terraform/1.3.2 (+https://www.terraform.io) Terraform-Plugin-SDK/2.10.1 terraform-provider-google/dev
+X-Goog-Api-Client: gl-go/1.18.1 gdcl/0.92.0
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-10-23T21:49:43.874Z
+2022-10-23T21:49:43.885Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_bigquery_dataset.bq_dataset, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .default_partition_expiration_ms: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .labels: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+      - .delete_contents_on_destroy: planned value cty.False for a non-computed attribute
+2022-10-23T21:49:43.894Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_storage_bucket.pluto_bucket, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .storage_class: planned value cty.StringVal("STANDARD") for a non-computed attribute
+      - .force_destroy: planned value cty.False for a non-computed attribute
+      - .requester_pays: planned value cty.False for a non-computed attribute
+      - .default_event_based_hold: planned value cty.False for a non-computed attribute
+      - .labels: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+2022-10-23T21:49:43.913Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_bigquery_table.bq_table, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .friendly_name: planned value cty.StringVal("") for a non-computed attribute
+      - .labels: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+      - .description: planned value cty.StringVal("") for a non-computed attribute
+2022-10-23T21:49:44.226Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:44 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Sun, 23 Oct 2022 21:49:44 GMT
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+ "name": "operations/bWItZGV2b3BzLXVzZXI3L3VzLWNlbnRyYWwxL2FjdGl2aXRpZXMtZnVuY3Rpb24vUGphTWhXNURySjA",
+ "metadata": {
+  "@type": "type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1",
+  "target": "projects/mb-devops-user7/locations/us-central1/functions/activities-function",
+  "type": "DELETE_FUNCTION",
+  "request": {
+   "@type": "type.googleapis.com/google.protobuf.Empty"
+  },
+  "updateTime": "2022-10-23T21:49:44Z"
+ }
+}
+-----------------------------------------------------: timestamp=2022-10-23T21:49:44.226Z
+2022-10-23T21:49:44.226Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:44 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:49:44.226Z
+2022-10-23T21:49:44.226Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:44 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:49:44.226Z
+2022-10-23T21:49:44.227Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:44 [INFO] Instantiating Google Cloud CloudFunctions Client for path https://cloudfunctions.googleapis.com/: timestamp=2022-10-23T21:49:44.227Z
+2022-10-23T21:49:44.227Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:44 [DEBUG] Waiting for state to become: [done: true]: timestamp=2022-10-23T21:49:44.227Z
+2022-10-23T21:49:44.228Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:44 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:49:44.227Z
+2022-10-23T21:49:44.228Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:44 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:49:44.227Z
+2022-10-23T21:49:44.228Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:44 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /v1/operations/bWItZGV2b3BzLXVzZXI3L3VzLWNlbnRyYWwxL2FjdGl2aXRpZXMtZnVuY3Rpb24vUGphTWhXNURySjA?alt=json&prettyPrint=false HTTP/1.1
+Host: cloudfunctions.googleapis.com
+User-Agent: google-api-go-client/0.5 Terraform/1.3.2 (+https://www.terraform.io) Terraform-Plugin-SDK/2.10.1 terraform-provider-google/dev
+X-Goog-Api-Client: gl-go/1.18.1 gdcl/0.92.0
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-10-23T21:49:44.228Z
+2022-10-23T21:49:44.338Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:44 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Sun, 23 Oct 2022 21:49:44 GMT
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+ "name": "operations/bWItZGV2b3BzLXVzZXI3L3VzLWNlbnRyYWwxL2FjdGl2aXRpZXMtZnVuY3Rpb24vUGphTWhXNURySjA",
+ "metadata": {
+  "@type": "type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1",
+  "target": "projects/mb-devops-user7/locations/us-central1/functions/activities-function",
+  "type": "DELETE_FUNCTION",
+  "request": {
+   "@type": "type.googleapis.com/google.protobuf.Empty"
+  },
+  "updateTime": "2022-10-23T21:49:44Z"
+ }
+}
+-----------------------------------------------------: timestamp=2022-10-23T21:49:44.337Z
+2022-10-23T21:49:44.338Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:44 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:49:44.337Z
+2022-10-23T21:49:44.338Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:44 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:49:44.337Z
+2022-10-23T21:49:44.338Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:44 [DEBUG] Got done: false while polling for operation operations/bWItZGV2b3BzLXVzZXI3L3VzLWNlbnRyYWwxL2FjdGl2aXRpZXMtZnVuY3Rpb24vUGphTWhXNURySjA's status: timestamp=2022-10-23T21:49:44.338Z
+2022-10-23T21:49:44.338Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:44 [TRACE] Waiting 10s before next try: timestamp=2022-10-23T21:49:44.338Z
+2022-10-23T21:49:54.339Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:54 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:49:54.339Z
+2022-10-23T21:49:54.339Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:54 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:49:54.339Z
+2022-10-23T21:49:54.339Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:54 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /v1/operations/bWItZGV2b3BzLXVzZXI3L3VzLWNlbnRyYWwxL2FjdGl2aXRpZXMtZnVuY3Rpb24vUGphTWhXNURySjA?alt=json&prettyPrint=false HTTP/1.1
+Host: cloudfunctions.googleapis.com
+User-Agent: google-api-go-client/0.5 Terraform/1.3.2 (+https://www.terraform.io) Terraform-Plugin-SDK/2.10.1 terraform-provider-google/dev
+X-Goog-Api-Client: gl-go/1.18.1 gdcl/0.92.0
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-10-23T21:49:54.339Z
+2022-10-23T21:49:54.566Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:54 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Sun, 23 Oct 2022 21:49:54 GMT
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+ "name": "operations/bWItZGV2b3BzLXVzZXI3L3VzLWNlbnRyYWwxL2FjdGl2aXRpZXMtZnVuY3Rpb24vUGphTWhXNURySjA",
+ "metadata": {
+  "@type": "type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1",
+  "target": "projects/mb-devops-user7/locations/us-central1/functions/activities-function",
+  "type": "DELETE_FUNCTION",
+  "request": {
+   "@type": "type.googleapis.com/google.protobuf.Empty"
+  },
+  "updateTime": "2022-10-23T21:49:44Z"
+ },
+ "done": true,
+ "response": {
+  "@type": "type.googleapis.com/google.protobuf.Empty"
+ }
+}
+-----------------------------------------------------: timestamp=2022-10-23T21:49:54.566Z
+2022-10-23T21:49:54.566Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:54 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:49:54.566Z
+2022-10-23T21:49:54.566Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:54 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:49:54.566Z
+2022-10-23T21:49:54.566Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:54 [DEBUG] Got done: true while polling for operation operations/bWItZGV2b3BzLXVzZXI3L3VzLWNlbnRyYWwxL2FjdGl2aXRpZXMtZnVuY3Rpb24vUGphTWhXNURySjA's status: timestamp=2022-10-23T21:49:54.566Z
+2022-10-23T21:49:54.576Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_storage_bucket_object.cloudfunction, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .content_disposition: planned value cty.StringVal("") for a non-computed attribute
+      - .detect_md5hash: planned value cty.StringVal("TbYhlvzfBj+DcU4SvejHBg==") for a non-computed attribute
+      - .temporary_hold: planned value cty.False for a non-computed attribute
+      - .cache_control: planned value cty.StringVal("") for a non-computed attribute
+      - .content_encoding: planned value cty.StringVal("") for a non-computed attribute
+      - .content_language: planned value cty.StringVal("") for a non-computed attribute
+      - .event_based_hold: planned value cty.False for a non-computed attribute
+      - .metadata: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+2022-10-23T21:49:54.577Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_pubsub_topic.pubsub_topic, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .labels: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+      - .kms_key_name: planned value cty.StringVal("") for a non-computed attribute
+2022-10-23T21:49:54.601Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_cloudfunctions_function.function, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .max_instances: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .ingress_settings: planned value cty.StringVal("ALLOW_ALL") for a non-computed attribute
+      - .event_trigger[0].failure_policy: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+2022-10-23T21:49:54.602Z [INFO]  Starting apply for google_cloudfunctions_function.function
+2022-10-23T21:49:54.603Z [DEBUG] google_cloudfunctions_function.function: applying the planned Create change
+2022-10-23T21:49:54.605Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_pubsub_subscription.pubsub_sub, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .enable_exactly_once_delivery: planned value cty.False for a non-computed attribute
+      - .filter: planned value cty.StringVal("") for a non-computed attribute
+      - .labels: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+      - .message_retention_duration: planned value cty.StringVal("604800s") for a non-computed attribute
+      - .enable_message_ordering: planned value cty.False for a non-computed attribute
+      - .retain_acked_messages: planned value cty.False for a non-computed attribute
+      - .expiration_policy: block count in plan (1) disagrees with count in config (0)
+2022-10-23T21:49:54.607Z [WARN]  Provider "registry.terraform.io/hashicorp/google" produced an invalid plan for google_cloud_asset_project_feed.project_feed, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .asset_names: planned value cty.ListValEmpty(cty.String) for a non-computed attribute
+2022-10-23T21:49:54.610Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:54 [DEBUG] setting computed for "event_trigger.0.failure_policy" from ComputedKeys: timestamp=2022-10-23T21:49:54.610Z
+2022-10-23T21:49:54.610Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:54 [DEBUG] setting computed for "event_trigger.0.failure_policy" from ComputedKeys: timestamp=2022-10-23T21:49:54.610Z
+2022-10-23T21:49:54.611Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:54 [DEBUG] Creating cloud function: projects/mb-devops-user7/locations/us-central1/functions/activities-function: timestamp=2022-10-23T21:49:54.611Z
+2022-10-23T21:49:54.611Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:54 [DEBUG] Waiting for state to become: [success]: timestamp=2022-10-23T21:49:54.611Z
+2022-10-23T21:49:54.611Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:54 [INFO] Instantiating Google Cloud CloudFunctions Client for path https://cloudfunctions.googleapis.com/: timestamp=2022-10-23T21:49:54.611Z
+2022-10-23T21:49:54.612Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:54 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:49:54.611Z
+2022-10-23T21:49:54.612Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:54 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:49:54.611Z
+2022-10-23T21:49:54.612Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:54 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+POST /v1/projects/mb-devops-user7/locations/us-central1/functions?alt=json&prettyPrint=false HTTP/1.1
+Host: cloudfunctions.googleapis.com
+User-Agent: google-api-go-client/0.5 Terraform/1.3.2 (+https://www.terraform.io) Terraform-Plugin-SDK/2.10.1 terraform-provider-google/dev
+Content-Length: 447
+Content-Type: application/json
+X-Goog-Api-Client: gl-go/1.18.1 gdcl/0.92.0
+Accept-Encoding: gzip
+
+{
+ "availableMemoryMb": 128,
+ "description": "Capture activities from pubsub and push into BQ",
+ "eventTrigger": {
+  "eventType": "google.pubsub.topic.publish",
+  "failurePolicy": {},
+  "resource": "projects/mb-devops-user7/topics/activities"
+ },
+ "ingressSettings": "ALLOW_ALL",
+ "name": "projects/mb-devops-user7/locations/us-central1/functions/activities-function",
+ "runtime": "python39",
+ "sourceArchiveUrl": "gs://mb-devops-user7-terraform/cloudfunction.zip",
+ "timeout": "60s"
+}
+
+-----------------------------------------------------: timestamp=2022-10-23T21:49:54.612Z
+2022-10-23T21:49:55.060Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:55 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Sun, 23 Oct 2022 21:49:55 GMT
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+ "name": "operations/bWItZGV2b3BzLXVzZXI3L3VzLWNlbnRyYWwxL2FjdGl2aXRpZXMtZnVuY3Rpb24va0Y5MGlSUFpaeFU",
+ "metadata": {
+  "@type": "type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1",
+  "target": "projects/mb-devops-user7/locations/us-central1/functions/activities-function",
+  "type": "CREATE_FUNCTION",
+  "request": {
+   "@type": "type.googleapis.com/google.cloud.functions.v1.CloudFunction",
+   "name": "projects/mb-devops-user7/locations/us-central1/functions/activities-function",
+   "description": "Capture activities from pubsub and push into BQ",
+   "sourceArchiveUrl": "gs://mb-devops-user7-terraform/cloudfunction.zip",
+   "eventTrigger": {
+    "eventType": "google.pubsub.topic.publish",
+    "resource": "projects/mb-devops-user7/topics/activities",
+    "failurePolicy": {}
+   },
+   "timeout": "60s",
+   "availableMemoryMb": 128,
+   "runtime": "python39",
+   "ingressSettings": "ALLOW_ALL"
+  },
+  "versionId": "1",
+  "updateTime": "2022-10-23T21:49:54Z"
+ }
+}
+-----------------------------------------------------: timestamp=2022-10-23T21:49:55.059Z
+2022-10-23T21:49:55.060Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:55 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:49:55.060Z
+2022-10-23T21:49:55.060Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:55 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:49:55.060Z
+2022-10-23T21:49:55.060Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:55 [INFO] Instantiating Google Cloud CloudFunctions Client for path https://cloudfunctions.googleapis.com/: timestamp=2022-10-23T21:49:55.060Z
+2022-10-23T21:49:55.060Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:55 [DEBUG] Waiting for state to become: [done: true]: timestamp=2022-10-23T21:49:55.060Z
+2022-10-23T21:49:55.060Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:55 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:49:55.060Z
+2022-10-23T21:49:55.061Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:55 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:49:55.060Z
+2022-10-23T21:49:55.061Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:55 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /v1/operations/bWItZGV2b3BzLXVzZXI3L3VzLWNlbnRyYWwxL2FjdGl2aXRpZXMtZnVuY3Rpb24va0Y5MGlSUFpaeFU?alt=json&prettyPrint=false HTTP/1.1
+Host: cloudfunctions.googleapis.com
+User-Agent: google-api-go-client/0.5 Terraform/1.3.2 (+https://www.terraform.io) Terraform-Plugin-SDK/2.10.1 terraform-provider-google/dev
+X-Goog-Api-Client: gl-go/1.18.1 gdcl/0.92.0
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-10-23T21:49:55.061Z
+2022-10-23T21:49:55.315Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:55 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Sun, 23 Oct 2022 21:49:55 GMT
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+ "name": "operations/bWItZGV2b3BzLXVzZXI3L3VzLWNlbnRyYWwxL2FjdGl2aXRpZXMtZnVuY3Rpb24va0Y5MGlSUFpaeFU",
+ "metadata": {
+  "@type": "type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1",
+  "target": "projects/mb-devops-user7/locations/us-central1/functions/activities-function",
+  "type": "CREATE_FUNCTION",
+  "request": {
+   "@type": "type.googleapis.com/google.cloud.functions.v1.CloudFunction",
+   "name": "projects/mb-devops-user7/locations/us-central1/functions/activities-function",
+   "description": "Capture activities from pubsub and push into BQ",
+   "sourceArchiveUrl": "gs://mb-devops-user7-terraform/cloudfunction.zip",
+   "eventTrigger": {
+    "eventType": "google.pubsub.topic.publish",
+    "resource": "projects/mb-devops-user7/topics/activities",
+    "failurePolicy": {}
+   },
+   "timeout": "60s",
+   "availableMemoryMb": 128,
+   "runtime": "python39",
+   "ingressSettings": "ALLOW_ALL"
+  },
+  "versionId": "1",
+  "updateTime": "2022-10-23T21:49:55Z"
+ }
+}
+-----------------------------------------------------: timestamp=2022-10-23T21:49:55.315Z
+2022-10-23T21:49:55.316Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:55 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:49:55.315Z
+2022-10-23T21:49:55.316Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:55 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:49:55.315Z
+2022-10-23T21:49:55.316Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:55 [DEBUG] Got done: false while polling for operation operations/bWItZGV2b3BzLXVzZXI3L3VzLWNlbnRyYWwxL2FjdGl2aXRpZXMtZnVuY3Rpb24va0Y5MGlSUFpaeFU's status: timestamp=2022-10-23T21:49:55.315Z
+2022-10-23T21:49:55.316Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:49:55 [TRACE] Waiting 10s before next try: timestamp=2022-10-23T21:49:55.316Z
+2022-10-23T21:50:05.318Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:50:05 [DEBUG] Retry Transport: starting RoundTrip retry loop: timestamp=2022-10-23T21:50:05.318Z
+2022-10-23T21:50:05.319Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:50:05 [DEBUG] Retry Transport: request attempt 0: timestamp=2022-10-23T21:50:05.318Z
+2022-10-23T21:50:05.319Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:50:05 [DEBUG] Google API Request Details:
+---[ REQUEST ]---------------------------------------
+GET /v1/operations/bWItZGV2b3BzLXVzZXI3L3VzLWNlbnRyYWwxL2FjdGl2aXRpZXMtZnVuY3Rpb24va0Y5MGlSUFpaeFU?alt=json&prettyPrint=false HTTP/1.1
+Host: cloudfunctions.googleapis.com
+User-Agent: google-api-go-client/0.5 Terraform/1.3.2 (+https://www.terraform.io) Terraform-Plugin-SDK/2.10.1 terraform-provider-google/dev
+X-Goog-Api-Client: gl-go/1.18.1 gdcl/0.92.0
+Accept-Encoding: gzip
+
+
+-----------------------------------------------------: timestamp=2022-10-23T21:50:05.318Z
+2022-10-23T21:50:05.567Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:50:05 [DEBUG] Google API Response Details:
+---[ RESPONSE ]--------------------------------------
+HTTP/2.0 200 OK
+Cache-Control: private
+Content-Type: application/json; charset=UTF-8
+Date: Sun, 23 Oct 2022 21:50:05 GMT
+Server: ESF
+Vary: Origin
+Vary: X-Origin
+Vary: Referer
+X-Content-Type-Options: nosniff
+X-Frame-Options: SAMEORIGIN
+X-Xss-Protection: 0
+
+{
+ "name": "operations/bWItZGV2b3BzLXVzZXI3L3VzLWNlbnRyYWwxL2FjdGl2aXRpZXMtZnVuY3Rpb24va0Y5MGlSUFpaeFU",
+ "metadata": {
+  "@type": "type.googleapis.com/google.cloud.functions.v1.OperationMetadataV1",
+  "target": "projects/mb-devops-user7/locations/us-central1/functions/activities-function",
+  "type": "CREATE_FUNCTION",
+  "request": {
+   "@type": "type.googleapis.com/google.cloud.functions.v1.CloudFunction",
+   "name": "projects/mb-devops-user7/locations/us-central1/functions/activities-function",
+   "description": "Capture activities from pubsub and push into BQ",
+   "sourceArchiveUrl": "gs://mb-devops-user7-terraform/cloudfunction.zip",
+   "eventTrigger": {
+    "eventType": "google.pubsub.topic.publish",
+    "resource": "projects/mb-devops-user7/topics/activities",
+    "failurePolicy": {}
+   },
+   "timeout": "60s",
+   "availableMemoryMb": 128,
+   "runtime": "python39",
+   "ingressSettings": "ALLOW_ALL"
+  },
+  "versionId": "1",
+  "updateTime": "2022-10-23T21:49:55Z"
+ },
+ "done": true,
+ "error": {
+  "code": 7,
+  "message": "Build failed: Cloud Build API has not been used in project 1020549290667 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudbuild.googleapis.com/overview?project=1020549290667 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."
+ }
+}
+-----------------------------------------------------: timestamp=2022-10-23T21:50:05.567Z
+2022-10-23T21:50:05.567Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:50:05 [DEBUG] Retry Transport: Stopping retries, last request was successful: timestamp=2022-10-23T21:50:05.567Z
+2022-10-23T21:50:05.568Z [INFO]  provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:50:05 [DEBUG] Retry Transport: Returning after 1 attempts: timestamp=2022-10-23T21:50:05.567Z
+2022-10-23T21:50:05.569Z [ERROR] provider.terraform-provider-google_v4.41.0_x5: Response contains error diagnostic: diagnostic_summary="Error waiting for Creating CloudFunctions Function: Error code 7, message: Build failed: Cloud Build API has not been used in project 1020549290667 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudbuild.googleapis.com/overview?project=1020549290667 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry." tf_rpc=ApplyResourceChange @caller=github.com/hashicorp/terraform-plugin-go@v0.10.0/tfprotov5/internal/diag/diagnostics.go:56 @module=sdk.proto diagnostic_severity=ERROR tf_proto_version=5.2 tf_provider_addr=provider tf_req_id=1bca756a-611b-ee87-64f8-993fd0f3f8c9 tf_resource_type=google_cloudfunctions_function diagnostic_detail= timestamp=2022-10-23T21:50:05.569Z
+2022-10-23T21:50:05.570Z [ERROR] vertex "google_cloudfunctions_function.function" error: Error waiting for Creating CloudFunctions Function: Error code 7, message: Build failed: Cloud Build API has not been used in project 1020549290667 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/cloudbuild.googleapis.com/overview?project=1020549290667 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+2022-10-23T21:50:06.094Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2022-10-23T21:50:06.095Z [DEBUG] provider.terraform-provider-google_v4.41.0_x5: 2022/10/23 21:50:06 [DEBUG] [transport] transport: http2Server.HandleStreams failed to read frame: read unix /tmp/plugin1787480463->@: use of closed network connection 
+2022-10-23T21:50:06.098Z [DEBUG] provider: plugin process exited: path=.terraform/providers/registry.terraform.io/hashicorp/google/4.41.0/linux_amd64/terraform-provider-google_v4.41.0_x5 pid=2028
+2022-10-23T21:50:06.098Z [DEBUG] provider: plugin exited
