@@ -1,6 +1,7 @@
+//
 resource "google_storage_bucket" "pluto_bucket" {
   name     = "${var.project_id}-bucket"
-  location = "us-central1"
+  location = var.region
   versioning {
     enabled = false
   }
@@ -42,18 +43,18 @@ resource "google_pubsub_subscription" "pubsub_sub" {
 }
 
 resource "google_storage_bucket_object" "cloudfunction" {
-  name   = "cloudfunction.zip"
-  bucket = "mb-devops-user7-terraform"
-  source = "./cloudfunction.zip"
+  name   = var.function_zip
+  bucket = var.infra_bucket
+  source = "./${var.function_zip}"
 }
 
 resource "google_cloudfunctions_function" "function" {
-  name        = "pubsub_to_bigquery"
+  name        = var.function_name
   description = "Capture activities from pubsub and push into BQ"
   runtime     = "python39"
 
   available_memory_mb   = 128
-  source_archive_bucket = "mb-devops-user7-terraform"
+  source_archive_bucket = var.infra_bucket
   source_archive_object = google_storage_bucket_object.cloudfunction.name
   timeout               = 60
   event_trigger {
@@ -65,7 +66,8 @@ resource "google_cloudfunctions_function" "function" {
 }
 
 resource "google_cloud_asset_project_feed" "project_feed" {
-  project      = var.project_id
+  for_each     = var.project_children
+  project      = each.value
   feed_id      = "asset-feed"
   content_type = "RESOURCE"
 
