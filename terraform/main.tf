@@ -133,3 +133,15 @@ resource "google_cloud_asset_project_feed" "project_feed" {
 
   depends_on = [google_pubsub_topic.pubsub_topic]
 }
+
+//grant service accent publisher access to core project
+//not had enough time to build yet
+/*
+resource "google_pubsub_topic_iam_member" "member" {
+  for_each = var.project_children //my child array of projects
+  project = var.project_id //my core project ID
+  topic = google_pubsub_topic.pubsub_topic.id //my generated pubsub topic
+  role = "roles/pubsub.publisher"
+  member = "serviceAccount:service-${each.value.project_number}@gcp-sa-cloudasset.iam.gserviceaccount.com" 
+}
+*/
