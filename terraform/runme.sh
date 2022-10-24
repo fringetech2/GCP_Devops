@@ -15,8 +15,6 @@ gcloud services enable oslogin.googleapis.com
 gcloud services enable pubsub.googleapis.com
 gcloud services enable servicemanagement.googleapis.com
 gcloud services enable serviceusage.googleapis.com
-gcloud services enable source.googleapis.com
-gcloud services enable sql-component.googleapis.com
 gcloud services enable storage-api.googleapis.com
 gcloud services enable storage-component.googleapis.com
 gcloud services enable storage.googleapis.com
