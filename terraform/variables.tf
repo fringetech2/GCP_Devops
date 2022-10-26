@@ -3,11 +3,11 @@ variable "region" {
   type    = string
 }
 variable "project_id" {
-  default = "mb-devops-user7"
+  default = "mb-devops-user17"
   type    = string
 }
 variable "infra_bucket" {
-  default = "mb-devops-user7-terraform"
+  default = "mb-devops-user17-terraform"
   type    = string
 }
 variable "function_zip" {
