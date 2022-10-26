@@ -1,4 +1,4 @@
 project_children = [
-  "mb-devops-user7-prod",
-  "mb-devops-user7"
+  "mb-devops-user17-prod",
+  "mb-devops-user17"
 ]
