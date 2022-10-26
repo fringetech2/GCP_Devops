@@ -20,5 +20,5 @@ variable "function_name" {
 }
 variable "project_children" {
   description = "Child projects"
-  type        = set
+  type        = string
 }
