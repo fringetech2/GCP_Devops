@@ -1,6 +1,6 @@
 terraform {
   backend "gcs" {
-    bucket = "mb-devops-user7-terraform"
+    bucket = "mb-devops-user17-terraform"
   }
 }
 provider "google" {
