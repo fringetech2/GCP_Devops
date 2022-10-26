@@ -7,7 +7,7 @@ variable "project_id" {
   type    = string
 }
 variable "infra_bucket" {
-  default = "mb-devops-user17-terraform"
+  default = "mb-devops-user17-prod-terraform"
   type    = string
 }
 variable "function_zip" {
