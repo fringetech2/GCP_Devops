@@ -49,18 +49,16 @@ resource "google_storage_bucket_object" "cloudfunction" {
 }
 
 resource "google_cloudfunctions_function" "function" {
-  name        = var.function_name
-  description = "Capture activities from pubsub and push into BQ"
-  runtime     = "python39"
-
-  available_memory_mb   = 128
-  source_repository = "https://source.cloud.google.com/mb-devops-user7/GCP_Devops_Training/+/main:cloudfunction/"
-  timeout               = 60
+  name                = var.function_name
+  description         = "Capture activities from pubsub and push into BQ"
+  runtime             = "python39"
+  available_memory_mb = 128
+  source_repository   = "https://source.cloud.google.com/mb-devops-user7/GCP_Devops_Training/+/main:cloudfunction/"
+  timeout             = 60
   event_trigger {
     resource   = google_pubsub_topic.pubsub_topic.name
     event_type = "google.pubsub.topic.publish"
   }
-
   depends_on = [google_pubsub_topic.pubsub_topic]
 }
 
@@ -69,7 +67,6 @@ resource "google_cloud_asset_project_feed" "project_feed" {
   project      = each.value
   feed_id      = "asset-feed"
   content_type = "RESOURCE"
-
   feed_output_config {
     pubsub_destination {
       topic = google_pubsub_topic.pubsub_topic.id
@@ -129,15 +126,14 @@ resource "google_cloud_asset_project_feed" "project_feed" {
     "compute.googleapis.com/VpnGateway",
     "compute.googleapis.com/VpnTunnel"
   ]
-
   depends_on = [google_pubsub_topic.pubsub_topic]
 }
 
 //grant service accent publisher access to core project
 resource "google_pubsub_topic_iam_member" "member" {
-  for_each = var.project_children //my child array of projects
-  project = var.project_id //my core project ID
-  topic = google_pubsub_topic.pubsub_topic.id //my generated pubsub topic
-  role = "roles/pubsub.publisher"
-  member = "serviceAccount:service-${each.value.project_number}@gcp-sa-cloudasset.iam.gserviceaccount.com" 
+  for_each = var.project_children                //my child array of projects
+  project  = var.project_id                      //my core project ID
+  topic    = google_pubsub_topic.pubsub_topic.id //my generated pubsub topic
+  role     = "roles/pubsub.publisher"
+  member   = "serviceAccount:service-${each.value.project_number}@gcp-sa-cloudasset.iam.gserviceaccount.com"
 }
