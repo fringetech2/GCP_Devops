@@ -53,7 +53,7 @@ resource "google_cloudfunctions_function" "function" {
   description         = "Capture activities from pubsub and push into BQ"
   runtime             = "python39"
   available_memory_mb = 128
-  source_repository   = "https://source.cloud.google.com/mb-devops-user7/GCP_Devops_Training/+/main:cloudfunction/"
+  source_repository   = "https://source.cloud.google.com/mb-devops-user17/GCP_Devops/+/main:cloudfunction/"
   timeout             = 60
   event_trigger {
     resource   = google_pubsub_topic.pubsub_topic.name
