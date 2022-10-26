@@ -54,8 +54,7 @@ resource "google_cloudfunctions_function" "function" {
   runtime     = "python39"
 
   available_memory_mb   = 128
-  source_archive_bucket = var.infra_bucket
-  source_archive_object = google_storage_bucket_object.cloudfunction.name
+  source_repository = "https://source.cloud.google.com/mb-devops-user7/GCP_Devops_Training/+/main:cloudfunction/"
   timeout               = 60
   event_trigger {
     resource   = google_pubsub_topic.pubsub_topic.name
